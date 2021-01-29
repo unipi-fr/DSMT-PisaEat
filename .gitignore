@@ -1,3 +1,5 @@
+# skip glassfish folder
+!glassfish6/
 # Compiled class file
 *.class
 
