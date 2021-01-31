@@ -17,14 +17,17 @@ public class TableResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces("text/plain")
-    public void createTable(Table table) {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Table createTable(Table table) {
         ITableDao iTableDao = new TableDao(MongoDbConnector.getInstance());
 
         try {
-            iTableDao.createTable(table);
+            Table newTable= iTableDao.createTable(table);
+            return newTable;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

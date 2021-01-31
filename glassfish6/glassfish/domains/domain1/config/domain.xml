@@ -55,6 +55,7 @@
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
       <application-ref ref="testApp-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
+      <application-ref ref="RestAPI-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -175,38 +176,39 @@
         <property name="default-digest-algorithm" value="SHA-256"></property>
       </security-service>
       <java-config classpath-suffix="" debug-options="-agentlib:jdwp=transport=dt_socket,address=9009,server=n,suspend=y" java-home="C:\Program Files\Java\jdk1.8.0_281" system-classpath="">
-        <jvm-options>-XX:MaxPermSize=192m</jvm-options>
-        <jvm-options>-client</jvm-options>
-        <jvm-options>-Djava.awt.headless=true</jvm-options>
-        <jvm-options>-Djdk.corba.allowOutputStreamSubclass=true</jvm-options>
-        <jvm-options>-Djdk.tls.rejectClientInitiatedRenegotiation=true</jvm-options>
-        <jvm-options>-Djavax.xml.accessExternalSchema=all</jvm-options>
-        <jvm-options>-Djavax.management.builder.initial=com.sun.enterprise.v3.admin.AppServerMBeanServerBuilder</jvm-options>
-        <jvm-options>-XX:+UnlockDiagnosticVMOptions</jvm-options>
-        <jvm-options>-Djava.endorsed.dirs=${com.sun.aas.installRoot}/modules/endorsed${path.separator}${com.sun.aas.installRoot}/lib/endorsed</jvm-options>
-        <jvm-options>-Djava.security.policy=${com.sun.aas.instanceRoot}/config/server.policy</jvm-options>
-        <jvm-options>-Djava.security.auth.login.config=${com.sun.aas.instanceRoot}/config/login.conf</jvm-options>
-        <jvm-options>-Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as</jvm-options>
-        <jvm-options>-Xmx512m</jvm-options>
-        <jvm-options>-Djavax.net.ssl.keyStore=${com.sun.aas.instanceRoot}/config/keystore.jks</jvm-options>
-        <jvm-options>-Djavax.net.ssl.trustStore=${com.sun.aas.instanceRoot}/config/cacerts.jks</jvm-options>
         <jvm-options>-Djava.ext.dirs=${com.sun.aas.javaRoot}/lib/ext${path.separator}${com.sun.aas.javaRoot}/jre/lib/ext${path.separator}${com.sun.aas.instanceRoot}/lib/ext</jvm-options>
-        <jvm-options>-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver</jvm-options>
-        <jvm-options>-DANTLR_USE_DIRECT_CLASS_LOADING=true</jvm-options>
-        <jvm-options>-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory</jvm-options>
-        <jvm-options>-Dorg.glassfish.additionalOSGiBundlesToStart=org.apache.felix.shell,org.apache.felix.gogo.runtime,org.apache.felix.gogo.shell,org.apache.felix.gogo.command,org.apache.felix.shell.remote,org.apache.felix.fileinstall</jvm-options>
-        <jvm-options>-Dosgi.shell.telnet.port=6666</jvm-options>
+        <jvm-options>-Djdk.corba.allowOutputStreamSubclass=true</jvm-options>
+        <jvm-options>-Djavax.net.ssl.trustStorePassword=changeit</jvm-options>
+        <jvm-options>-Djdk.tls.rejectClientInitiatedRenegotiation=true</jvm-options>
+        <jvm-options>-Djavax.management.builder.initial=com.sun.enterprise.v3.admin.AppServerMBeanServerBuilder</jvm-options>
+        <jvm-options>-XX:MaxPermSize=192m</jvm-options>
         <jvm-options>-Dosgi.shell.telnet.maxconn=1</jvm-options>
-        <jvm-options>-Dosgi.shell.telnet.ip=127.0.0.1</jvm-options>
+        <jvm-options>-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory</jvm-options>
+        <jvm-options>-Djava.endorsed.dirs=${com.sun.aas.installRoot}/modules/endorsed${path.separator}${com.sun.aas.installRoot}/lib/endorsed</jvm-options>
         <jvm-options>-Dgosh.args=--nointeractive</jvm-options>
-        <jvm-options>-Dfelix.fileinstall.dir=${com.sun.aas.installRoot}/modules/autostart/</jvm-options>
-        <jvm-options>-Dfelix.fileinstall.poll=5000</jvm-options>
-        <jvm-options>-Dfelix.fileinstall.log.level=2</jvm-options>
-        <jvm-options>-Dfelix.fileinstall.bundles.new.start=true</jvm-options>
-        <jvm-options>-Dfelix.fileinstall.bundles.startTransient=true</jvm-options>
+        <jvm-options>-Dorg.glassfish.additionalOSGiBundlesToStart=org.apache.felix.shell,org.apache.felix.gogo.runtime,org.apache.felix.gogo.shell,org.apache.felix.gogo.command,org.apache.felix.shell.remote,org.apache.felix.fileinstall</jvm-options>
+        <jvm-options>-Djava.security.auth.login.config=${com.sun.aas.instanceRoot}/config/login.conf</jvm-options>
         <jvm-options>-Dfelix.fileinstall.disableConfigSave=false</jvm-options>
-        <jvm-options>-XX:NewRatio=2</jvm-options>
+        <jvm-options>-Djava.security.policy=${com.sun.aas.instanceRoot}/config/server.policy</jvm-options>
+        <jvm-options>-Dfelix.fileinstall.bundles.new.start=true</jvm-options>
+        <jvm-options>-Djavax.xml.accessExternalSchema=all</jvm-options>
+        <jvm-options>-Dosgi.shell.telnet.port=6666</jvm-options>
+        <jvm-options>-Dfelix.fileinstall.log.level=2</jvm-options>
+        <jvm-options>-Djava.awt.headless=true</jvm-options>
+        <jvm-options>-Dfelix.fileinstall.poll=5000</jvm-options>
+        <jvm-options>-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver</jvm-options>
+        <jvm-options>-XX:+UnlockDiagnosticVMOptions</jvm-options>
+        <jvm-options>-Dfelix.fileinstall.dir=${com.sun.aas.installRoot}/modules/autostart/</jvm-options>
+        <jvm-options>-Djavax.net.ssl.keyStorePassword=changeit</jvm-options>
+        <jvm-options>-Djavax.net.ssl.keyStore=${com.sun.aas.instanceRoot}/config/keystore.jks</jvm-options>
+        <jvm-options>-DANTLR_USE_DIRECT_CLASS_LOADING=true</jvm-options>
+        <jvm-options>-Xmx512m</jvm-options>
+        <jvm-options>-Dfelix.fileinstall.bundles.startTransient=true</jvm-options>
         <jvm-options>-Dcom.ctc.wstx.returnNullForDefaultNamespace=true</jvm-options>
+        <jvm-options>-client</jvm-options>
+        <jvm-options>-Dosgi.shell.telnet.ip=127.0.0.1</jvm-options>
+        <jvm-options>-Djavax.net.ssl.trustStore=${com.sun.aas.instanceRoot}/config/cacerts.jks</jvm-options>
+        <jvm-options>-XX:NewRatio=2</jvm-options>
       </java-config>
       <network-config>
         <protocols>
@@ -464,6 +466,15 @@
         <engine sniffer="security"></engine>
         <engine sniffer="web"></engine>
         <engine sniffer="weld"></engine>
+      </module>
+    </application>
+    <application context-root="/RestAPI-1.0-SNAPSHOT" object-type="user" name="RestAPI-1.0-SNAPSHOT" directory-deployed="true" location="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/">
+      <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/"></property>
+      <property name="archiveType" value="war"></property>
+      <property name="defaultAppName" value="RestAPI-1.0-SNAPSHOT"></property>
+      <module name="RestAPI-1.0-SNAPSHOT">
+        <engine sniffer="security"></engine>
+        <engine sniffer="web"></engine>
       </module>
     </application>
   </applications>

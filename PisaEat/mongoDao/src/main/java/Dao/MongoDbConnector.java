@@ -15,12 +15,13 @@ public class MongoDbConnector {
     private static String password = "pisaeat";
     private static String projectName = "pisaeat";
     private static String dbName = "pisaeat";
-    private static String CONNECTION_STRING =
+    /*private static String CONNECTION_STRING =
             String.format(
                     "mongodb+srv://pisaeat:%1$s@cluster0.mxzsb.mongodb.net/%2$s?retryWrites=true&w=majority",
                     password,
                     projectName);
-            ;
+            ;*/
+    private static String CONNECTION_STRING = "mongodb://localhost:27017";
 
     public static MongoDbConnector getInstance(){
         if (instance == null){
