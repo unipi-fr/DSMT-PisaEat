@@ -1,0 +1,7 @@
+POST http://localhost:8080/RestAPI-1.0-SNAPSHOT/api/table HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Tavolo4",
+    "numberOfSeat": 5
+}

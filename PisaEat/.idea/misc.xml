@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/RestAPI" />
     <file type="web" url="file://$PROJECT_DIR$/testApp" />
     <file type="web" url="file://$PROJECT_DIR$/website" />
   </component>
@@ -11,6 +12,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/testApp/pom.xml" />
         <option value="$PROJECT_DIR$/website/pom.xml" />
+        <option value="$PROJECT_DIR$/RestAPI/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

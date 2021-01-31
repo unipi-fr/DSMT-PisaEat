@@ -23,9 +23,9 @@ public class main {
         Table t3 = new Table("3", 8,new ObjectId().toString());
 
         // insert 2 tables
-        tableDao.createTable(t1);
-        tableDao.createTable(t2);
-        tableDao.createTable(t3);
+        t1 = tableDao.createTable(t1);
+        t2 = tableDao.createTable(t2);
+        t3 = tableDao.createTable(t3);
         System.out.println("Inserted:");
         System.out.println(t1);
         System.out.println(t2);

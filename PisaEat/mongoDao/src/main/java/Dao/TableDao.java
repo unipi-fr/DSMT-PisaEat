@@ -1,54 +1,75 @@
 package Dao;
 
 import com.mongodb.client.MongoCollection;
-import com.sun.deploy.util.StringUtils;
+import database.ITableDao;
 import entities.MongoTable;
 import entities.Table;
 import org.bson.types.ObjectId;
 
-import java.util.Optional;
+public class TableDao implements ITableDao {
 
-public class TableDao {
-
-    private MongoDbConnector dbConnector;
-    private MongoCollection<MongoTable> collection;
+    private final MongoCollection<MongoTable> collection;
 
     public TableDao(MongoDbConnector dbConnector) {
-        this.dbConnector = dbConnector;
-        this.collection = this.dbConnector.getDatabase().getCollection("table", MongoTable.class);
+        this.collection = dbConnector.getDatabase().getCollection("table", MongoTable.class);
     }
 
-    public void createTable(Table table){
-        Optional<MongoTable> optMongoTable = tableToMongoTable(table);
-
-        if(!optMongoTable.isPresent()) {
-            return;
+    public Table createTable(Table table) {
+        if (table == null) {
+            throw new IllegalArgumentException();
         }
-        MongoTable mongoTable = optMongoTable.get();
+
+        MongoTable mongoTable = tableToMongoTable(table);
 
         collection.insertOne(mongoTable);
 
-
+        return mongoTableToTable(mongoTable);
     }
 
-    protected Optional<MongoTable> tableToMongoTable(Table table) {
-        if(table == null){
-            return Optional.empty();
+    /*@Override
+    public Iterable<Table> getTables() {
+        return null;
+    }*/
+
+    protected MongoTable tableToMongoTable(Table table) {
+        if (table == null) {
+            return null;
         }
+
         ObjectId id = null;
         String name = table.getName();
         int numberOfSeat = table.getNumberOfSeat();
         ObjectId bookSessionId = null;
 
-        if(table.getId() != null && !table.getId().trim().isEmpty()){
+        if (table.getId() != null && !table.getId().trim().isEmpty()) {
             id = new ObjectId(table.getId());
         }
 
-        if(table.getBookSessionId() != null && !table.getBookSessionId().trim().isEmpty()){
-            bookSessionId = new ObjectId(table.getId());
+        if (table.getBookSessionId() != null && !table.getBookSessionId().trim().isEmpty()) {
+            bookSessionId = new ObjectId(table.getBookSessionId());
         }
 
-        MongoTable mongoTable = new MongoTable(id, name, numberOfSeat, bookSessionId);
-        return Optional.of(mongoTable);
+        return new MongoTable(id, name, numberOfSeat, bookSessionId);
+    }
+
+    protected Table mongoTableToTable(MongoTable mongoTable) {
+        if (mongoTable == null) {
+            return null;
+        }
+
+        String id = null;
+        String name = mongoTable.getName();
+        int numberOfSeat = mongoTable.getNumberOfSeat();
+        String bookSessionId = null;
+
+        if (mongoTable.getId() != null) {
+            id = mongoTable.getId().toHexString();
+        }
+
+        if (mongoTable.getBookSessionId() != null) {
+            bookSessionId = mongoTable.getBookSessionId().toHexString();
+        }
+
+        return new Table(id, name, numberOfSeat, bookSessionId);
     }
 }

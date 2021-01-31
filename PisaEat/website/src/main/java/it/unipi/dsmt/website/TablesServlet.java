@@ -1,5 +1,6 @@
 package it.unipi.dsmt.website;
 
+import entities.Table;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -18,9 +19,9 @@ public class TablesServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Set<Table> tables= new HashSet<>();
 
-        tables.add(new Table("Tavolo1", 15));
-        tables.add(new Table("Tavolo2", 10));
-        tables.add(new Table("Tavolo3", 20));
+        tables.add(new Table("Tavolo1", 15, null));
+        tables.add(new Table("Tavolo2", 10, null));
+        tables.add(new Table("Tavolo3", 20, null));
 
         req.setAttribute("Tables", tables);
 

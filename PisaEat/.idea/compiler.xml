@@ -10,6 +10,8 @@
         <module name="mongoDao" />
         <module name="website" />
         <module name="model" />
+        <module name="interfaces" />
+        <module name="RestAPI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -2,75 +2,89 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="testApp:war exploded" />
+      <artifact name="RestAPI:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="41413b3e-75d8-452a-9463-3d44df321a81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongoDao/src/main/java/entities/MongoTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/JAX_RS_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/JAX_RS_2_1_1__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/it/unipi/dsmt/RestAPI/RestWebService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/java/it/unipi/dsmt/RestAPI/TableResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestAPI/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client.HTTP" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/src/main/java/database/ITableDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/Entities/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/entities/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/src/main/java/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/website/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/main/java/it/unipi/dsmt/website/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/main/java/it/unipi/dsmt/website/TablesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/main/java/it/unipi/dsmt/website/TablesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/domain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/domain.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/domain.xml.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/domain.xml.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/local-password" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/testApp-1.0-SNAPSHOT/testApp-1_0-SNAPSHOT/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/testApp-1.0-SNAPSHOT/testApp-1_0-SNAPSHOT/granted.policy" afterDir="false" />
+    </list>
+    <list id="928d9a44-53b2-4b91-88cf-fe363dc4df9b" name="Changes by andrea" comment="" />
+    <list id="a8058811-3d93-4a04-b9fb-b3164bfab7d5" name="Changes by francesco.ronchieri" comment="">
+      <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="7" end1="9" start2="7" end2="7" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="10" end1="11" start2="8" end2="9" changelist="a8058811-3d93-4a04-b9fb-b3164bfab7d5" />
+        <range start1="12" end1="14" start2="10" end2="11" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="16" end1="18" start2="13" end2="14" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="20" end1="25" start2="16" end2="19" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="26" end1="27" start2="20" end2="22" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="30" end1="31" start2="25" end2="26" changelist="a8058811-3d93-4a04-b9fb-b3164bfab7d5" />
+        <range start1="32" end1="32" start2="27" end2="32" changelist="a8058811-3d93-4a04-b9fb-b3164bfab7d5" />
+        <range start1="33" end1="36" start2="33" end2="36" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="37" end1="37" start2="37" end2="38" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="42" end1="43" start2="43" end2="44" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="46" end1="48" start2="47" end2="49" changelist="41413b3e-75d8-452a-9463-3d44df321a81" />
+        <range start1="50" end1="52" start2="51" end2="52" changelist="a8058811-3d93-4a04-b9fb-b3164bfab7d5" />
+        <range start1="53" end1="53" start2="53" end2="74" changelist="a8058811-3d93-4a04-b9fb-b3164bfab7d5" />
+      </ranges>
+    </file>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1nkcSs4OzTuTRtDUHdzTjP5Kb3A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -88,20 +102,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="extract.method.default.visibility" value="protected" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mongoDao/src/main/java" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/website/src/main/resources" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\DSMT-PisaEat\PisaEat\mongoDao\src\main\java" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -150,13 +156,11 @@
       </method>
     </configuration>
     <configuration name="GlassFish 6.0.01" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.0.01" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/testApp-1.0-SNAPSHOT/" />
       <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="testApp:war exploded">
-          <settings />
-        </artifact>
-        <artifact name="website:war exploded">
+        <artifact name="RestAPI:war exploded">
           <settings />
         </artifact>
       </deployment>
@@ -220,8 +224,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="testApp:war exploded" />
-          <artifact name="website:war exploded" />
+          <artifact name="RestAPI:war exploded" />
         </option>
       </method>
     </configuration>
@@ -249,8 +252,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611937531387</updated>
       <workItem from="1611937532607" duration="2638000" />
-      <workItem from="1612023348617" duration="884000" />
-      <workItem from="1612089481904" duration="5340000" />
+      <workItem from="1612014769744" duration="8345000" />
+      <workItem from="1612088451647" duration="4750000" />
     </task>
     <servers />
   </component>
@@ -271,47 +274,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="358" y="91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612092382239">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="358" y="91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1536.824@0.40.1536.824" timestamp="1612092382239" />
-    <state x="499" y="199" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1612092650236">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="499" y="199" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.40.1536.824@0.40.1536.824" timestamp="1612092650236" />
-    <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1612023508822">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1612023508822" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612094827612">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612094827612">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612094827612">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612094827612">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
-    <state x="299" y="107" key="Maven.ArtifactSearchDialog" timestamp="1612089719317">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="299" y="107" key="Maven.ArtifactSearchDialog/0.40.1536.824@0.40.1536.824" timestamp="1612089719317" />
-    <state x="499" y="213" key="extract.method.dialog" timestamp="1612094121828">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="499" y="213" key="extract.method.dialog/0.40.1536.824@0.40.1536.824" timestamp="1612094121828" />
-    <state x="407" y="73" key="new project wizard" timestamp="1612090208153">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="407" y="73" key="new project wizard/0.40.1536.824@0.40.1536.824" timestamp="1612090208153" />
   </component>
 </project>
