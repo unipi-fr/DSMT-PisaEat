@@ -1,9 +1,9 @@
-/* AUTOMATICALLY GENERATED ON Sat Jan 30 15:21:16 CET 2021*/
+/* AUTOMATICALLY GENERATED ON Sun Jan 31 13:38:58 CET 2021*/
 /* DO NOT EDIT */
 
 grant {
-  permission jakarta.security.jacc.WebUserDataPermission "/";
   permission jakarta.security.jacc.WebResourcePermission "/";
+  permission jakarta.security.jacc.WebUserDataPermission "/";
 };
 
 grant      principal * * {
