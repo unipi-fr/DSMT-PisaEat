@@ -1,24 +1,23 @@
-package Entities;
+package entities;
 
 import org.bson.types.ObjectId;
 
-public class Table {
-
+public class MongoTable {
     private ObjectId id;
     private String name;
     private int numberOfSeat;
     private ObjectId bookSessionId;
 
-    public Table() {
+    public MongoTable() {
     }
 
-    public Table(String name, int numberOfSeat, ObjectId bookSessionId) {
+    public MongoTable(String name, int numberOfSeat, ObjectId bookSessionId) {
         this.name = name;
         this.numberOfSeat = numberOfSeat;
         this.bookSessionId = bookSessionId;
     }
 
-    public Table(ObjectId id, String name, int numberOfSeat, ObjectId bookSessionId) {
+    public MongoTable(ObjectId id, String name, int numberOfSeat, ObjectId bookSessionId) {
         this.id = id;
         this.name = name;
         this.numberOfSeat = numberOfSeat;

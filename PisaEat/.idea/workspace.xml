@@ -28,13 +28,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41413b3e-75d8-452a-9463-3d44df321a81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mongoDao/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/MongoDbConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongoDao/src/main/java/Entities/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongoDao/src/main/java/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mongoDao/src/main/java/entities/MongoTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongoDao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/src/main/java/Dao/TableDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/Entities/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/entities/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongoDao/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDao/src/main/java/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +47,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -75,8 +85,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="protected" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mongoDao/src/main/java" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -126,15 +138,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,9 +229,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.main" />
       <item itemvalue="GlassFish Server.GlassFish 6.0.01" />
       <item itemvalue="HTTP Request.generated-requests#1" />
-      <item itemvalue="Application.main" />
     </list>
     <recent_temporary>
       <list>
@@ -240,6 +250,7 @@
       <updated>1611937531387</updated>
       <workItem from="1611937532607" duration="2638000" />
       <workItem from="1612023348617" duration="884000" />
+      <workItem from="1612089481904" duration="5340000" />
     </task>
     <servers />
   </component>
@@ -262,29 +273,45 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="358" y="91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612092382239">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="358" y="91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1536.824@0.40.1536.824" timestamp="1612092382239" />
+    <state x="499" y="199" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1612092650236">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="499" y="199" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.40.1536.824@0.40.1536.824" timestamp="1612092650236" />
     <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1612023508822">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1612023508822" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612025960420">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612094827612">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612025960420" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612025960420">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612094827612">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612025960420" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612025960420">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612094827612">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612025960420" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612025960420">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612094827612">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612025960420" />
-    <state x="407" y="73" key="new project wizard" timestamp="1612023399950">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612094827612" />
+    <state x="299" y="107" key="Maven.ArtifactSearchDialog" timestamp="1612089719317">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="407" y="73" key="new project wizard/0.40.1536.824@0.40.1536.824" timestamp="1612023399950" />
+    <state x="299" y="107" key="Maven.ArtifactSearchDialog/0.40.1536.824@0.40.1536.824" timestamp="1612089719317" />
+    <state x="499" y="213" key="extract.method.dialog" timestamp="1612094121828">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="499" y="213" key="extract.method.dialog/0.40.1536.824@0.40.1536.824" timestamp="1612094121828" />
+    <state x="407" y="73" key="new project wizard" timestamp="1612090208153">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="407" y="73" key="new project wizard/0.40.1536.824@0.40.1536.824" timestamp="1612090208153" />
   </component>
 </project>

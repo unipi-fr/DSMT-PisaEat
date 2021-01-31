@@ -1,7 +1,8 @@
 import Dao.MongoDbConnector;
 import Dao.TableDao;
-import Entities.Table;
 import com.mongodb.client.MongoCollection;
+import entities.MongoTable;
+import entities.Table;
 import org.bson.types.ObjectId;
 
 import static com.mongodb.client.model.Filters.and;
@@ -17,22 +18,21 @@ public class main {
     private static void tryTableDao() {
         TableDao tableDao = new TableDao(MongoDbConnector.getInstance());
 
-        Table t1 = new Table("1", 8,new ObjectId());
-        Table t2 = new Table("2", 8,new ObjectId());
-        Table t3 = new Table("3", 8,new ObjectId());
-
-        MongoCollection<Table> tableCollection = tableDao.getTableCollection();
+        Table t1 = new Table("1", 8,new ObjectId().toString());
+        Table t2 = new Table("2", 8,new ObjectId().toString());
+        Table t3 = new Table("3", 8,new ObjectId().toString());
 
         // insert 2 tables
-        tableCollection.insertOne(t1);
+        tableDao.createTable(t1);
         tableDao.createTable(t2);
-        tableCollection.insertOne(t3);
+        tableDao.createTable(t3);
         System.out.println("Inserted:");
         System.out.println(t1);
         System.out.println(t2);
+        System.out.println(t3);
 
         // using findOneAndUpdate to modify a sessionId
-        t2 = tableCollection.
+        /*t2 = tableCollection.
                 findOneAndUpdate(
                     and(
                             eq("_id", t2.getId()),
@@ -43,7 +43,7 @@ public class main {
         System.out.println(t2);
 
         // using findOneAndUpdate to modify a wrong sessionId
-        Table t4 = tableCollection.
+        MongoTable t4 = tableCollection.
                 findOneAndUpdate(
                         and(
                                 eq("_id", t3.getId()),
@@ -52,5 +52,6 @@ public class main {
                         ,set("bookSessionId", null));
         System.out.println("trying to modify T3 document with wrong session");
         System.out.println(t4);
+         */
     }
 }

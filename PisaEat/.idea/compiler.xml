@@ -9,7 +9,11 @@
         <module name="testApp" />
         <module name="mongoDao" />
         <module name="website" />
+        <module name="model" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="entities" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
