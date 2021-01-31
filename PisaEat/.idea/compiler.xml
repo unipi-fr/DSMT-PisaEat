@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="testApp" />
-        <module name="mongoDao" />
         <module name="website" />
-        <module name="model" />
         <module name="interfaces" />
         <module name="RestAPI" />
+        <module name="testApp" />
+        <module name="mongoDao" />
+        <module name="ejbs" />
+        <module name="model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ejb" target="1.8" />
       <module name="entities" target="8" />
     </bytecodeTargetLevel>
   </component>

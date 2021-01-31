@@ -54,7 +54,6 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
-      <application-ref ref="testApp-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <application-ref ref="RestAPI-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
@@ -457,18 +456,7 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
-    <application context-root="/testApp-1.0-SNAPSHOT" object-type="user" name="testApp-1.0-SNAPSHOT" directory-deployed="true" location="file:/C:/DSMT-PisaEat/PisaEat/testApp/target/testApp-1.0-SNAPSHOT/">
-      <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEat/testApp/target/testApp-1.0-SNAPSHOT/"></property>
-      <property name="archiveType" value="war"></property>
-      <property name="defaultAppName" value="testApp-1.0-SNAPSHOT"></property>
-      <module name="testApp-1.0-SNAPSHOT">
-        <engine sniffer="jpa"></engine>
-        <engine sniffer="security"></engine>
-        <engine sniffer="web"></engine>
-        <engine sniffer="weld"></engine>
-      </module>
-    </application>
-    <application context-root="/RestAPI-1.0-SNAPSHOT" object-type="user" name="RestAPI-1.0-SNAPSHOT" directory-deployed="true" location="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/">
+    <application context-root="/RestAPI-1.0-SNAPSHOT" object-type="user" directory-deployed="true" name="RestAPI-1.0-SNAPSHOT" location="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/">
       <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/"></property>
       <property name="archiveType" value="war"></property>
       <property name="defaultAppName" value="RestAPI-1.0-SNAPSHOT"></property>

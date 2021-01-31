@@ -1,6 +1,8 @@
 package entities;
 
-public class Table {
+import java.io.Serializable;
+
+public class Table implements Serializable {
     private String id;
     private String name;
     private int numberOfSeat;
