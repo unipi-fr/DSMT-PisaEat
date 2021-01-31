@@ -1,0 +1,16 @@
+/* AUTOMATICALLY GENERATED ON Sat Jan 30 15:21:16 CET 2021*/
+/* DO NOT EDIT */
+
+grant {
+  permission jakarta.security.jacc.WebUserDataPermission "/";
+  permission jakarta.security.jacc.WebResourcePermission "/";
+};
+
+grant      principal * * {
+  permission jakarta.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission jakarta.security.jacc.WebRoleRefPermission "", "**";
+  permission jakarta.security.jacc.WebRoleRefPermission "it.unipi.dsmt.testApp.HelloApplication", "**";
+  permission jakarta.security.jacc.WebRoleRefPermission "helloServlet", "**";
+  permission jakarta.security.jacc.WebRoleRefPermission "default", "**";
+};
+
