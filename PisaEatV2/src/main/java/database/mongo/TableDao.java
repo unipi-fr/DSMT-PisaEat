@@ -1,10 +1,22 @@
 package database.mongo;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.result.UpdateResult;
 import database.ITableDao;
+import database.exceptions.TableNotFoundException;
 import database.mongo.entities.MongoTable;
 import entities.Table;
 import org.bson.types.ObjectId;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Updates.combine;
+import static com.mongodb.client.model.Updates.set;
 
 public class TableDao implements ITableDao {
 
@@ -26,10 +38,56 @@ public class TableDao implements ITableDao {
         return mongoTableToTable(mongoTable);
     }
 
-    /*@Override
-    public Iterable<Table> getTables() {
-        return null;
-    }*/
+    @Override
+    public Collection<Table> getTables() {
+        List<Table> tables = new ArrayList<Table>();
+
+        FindIterable<MongoTable> findIterable = collection.find();
+        for (MongoTable mongoTable : findIterable) {
+            tables.add(mongoTableToTable(mongoTable));
+        }
+
+        return tables;
+    }
+
+    @Override
+    public Table getTableById(String idTable) {
+        ObjectId id = null;
+
+        try {
+            id = new ObjectId(idTable);
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
+
+        MongoTable mongoTable = collection.find(
+                eq("_id", id)
+        ).first();
+
+        return mongoTableToTable(mongoTable);
+    }
+
+    @Override
+    public Table updateTable(Table table) throws TableNotFoundException {
+        MongoTable mongoTable = tableToMongoTable(table);
+
+        UpdateResult result = collection.updateOne(
+                eq("_id", table.getId()),
+                combine(
+                        set("name", mongoTable.getName()),
+                        set("numberOfSeat", mongoTable.getNumberOfSeat()),
+                        set("bookSessionId", mongoTable.getBookSessionId())
+                )
+        );
+
+        long matchedCount = result.getMatchedCount();
+
+        if (matchedCount == 0) {
+            throw new TableNotFoundException();
+        }
+
+        return table;
+    }
 
     protected MongoTable tableToMongoTable(Table table) {
         if (table == null) {
