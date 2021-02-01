@@ -13,7 +13,8 @@
         <option value="$PROJECT_DIR$/testApp/pom.xml" />
         <option value="$PROJECT_DIR$/website/pom.xml" />
         <option value="$PROJECT_DIR$/RestAPI/pom.xml" />
-        <option value="$PROJECT_DIR$/ejbs/pom.xml" />
+        <option value="$PROJECT_DIR$/testEJB/pom.xml" />
+        <option value="$PROJECT_DIR$/beans/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

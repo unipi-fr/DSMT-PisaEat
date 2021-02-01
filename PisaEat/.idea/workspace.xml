@@ -2,41 +2,41 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="RestAPI:war exploded" />
-      <artifact name="ejbs:ejb exploded" />
-      <artifact name="ejbs:ejb exploded2" />
-      <artifact name="ejbs:ejb exploded2 archive" />
-      <artifact name="website:war exploded" />
+      <artifact name="beans" />
+      <artifact name="website" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="41413b3e-75d8-452a-9463-3d44df321a81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beans/src/main/java/ejbs/NoSenseClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beans/src/main/java/ejbs/TableBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beans/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beans/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/pid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/beans/beans/granted.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/testEJB_ejb_exploded/testEJB_ejb_exploded/granted.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/website-1.0-SNAPSHOT/website-1_0-SNAPSHOT/granted.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/website-1.0-SNAPSHOT/website-1_0-SNAPSHOT_internal/granted.policy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ejbs_ejb_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI/target/RestAPI-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI/target/RestAPI-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/ejbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/beans/testEJB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/beans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/java/stateless/TableBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejbs/target/classes/META-INF/beans.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/entities/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/entities/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/src/main/java/ejbs/ITableBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/beans/src/main/java/interfaces/ITableBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ejbs_ejb_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ejbs_ejb_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/website/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/src/main/java/it/unipi/dsmt/website/TablesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/main/java/it/unipi/dsmt/website/TablesServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/target/website-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/website-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
@@ -45,9 +45,604 @@
       <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/domain.xml.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/domain.xml.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/local-password" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/local-password" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/pid.prev" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/config/pid.prev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/jsp/testApp-1.0-SNAPSHOT/org/apache/jsp/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/RestAPI-1.0-SNAPSHOT/RestAPI-1_0-SNAPSHOT/granted.policy" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/RestAPI-1.0-SNAPSHOT/RestAPI-1_0-SNAPSHOT/granted.policy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/testApp-1.0-SNAPSHOT/testApp-1_0-SNAPSHOT/granted.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/generated/policy/RestAPI-1.0-SNAPSHOT/RestAPI-1_0-SNAPSHOT/granted.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/logs/server/tx/recoveryfile" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/logs/server/tx/recoveryfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle0/bundle.id" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle0/bundle.id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle0/glassfish.bundleids" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle0/glassfish.bundleids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle0/provisioning.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle0/provisioning.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle297/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle297/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle298/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle298/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle299/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle299/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle300/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle300/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle301/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle301/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle302/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle302/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle303/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle303/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle304/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle304/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle305/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle305/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle306/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle306/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle307/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle307/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle308/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle308/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle309/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle309/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle310/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle310/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle311/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle311/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle312/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle312/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle313/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle313/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle314/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle314/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle315/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle315/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle316/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle316/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle317/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle317/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle318/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle318/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle319/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle319/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle320/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle320/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle321/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle321/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle322/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle322/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle323/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle323/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle324/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle324/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle325/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle325/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle326/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle326/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle327/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle327/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle328/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle328/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle329/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle329/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle330/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle330/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle331/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle331/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle332/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle332/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle333/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle333/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle334/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle334/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle335/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle335/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle336/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle336/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle337/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle337/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle338/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle338/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle339/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle339/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle340/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle340/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle341/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle341/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle342/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle342/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle343/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle343/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle344/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle344/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle345/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle345/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle346/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle346/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle347/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle347/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle348/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle348/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle349/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle349/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle350/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle350/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle351/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle351/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle352/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle352/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle353/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle353/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle354/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle354/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle355/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle355/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle356/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle356/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle357/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle357/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle358/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle358/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle359/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle359/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle360/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle360/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle361/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle361/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle362/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle362/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle363/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle363/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle364/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle364/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle365/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle365/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle366/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle366/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle367/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle367/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle368/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle368/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle369/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle369/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle370/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle370/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle371/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle371/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle372/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle372/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle373/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle373/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle374/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle374/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle375/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle375/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle376/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle376/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle377/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle377/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle378/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle378/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle379/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle379/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle380/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle380/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle381/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle381/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle382/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle382/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle383/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle383/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle384/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle384/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle385/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle385/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle386/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle386/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle387/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle387/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle388/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle388/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle389/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle389/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle390/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle390/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle391/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle391/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle392/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle392/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle393/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle393/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle394/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle394/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle395/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle395/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle396/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle396/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle397/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle397/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle398/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle398/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle399/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle399/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle400/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle400/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle401/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle401/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle402/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle402/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle403/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle403/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle404/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle404/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle405/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle405/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle406/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle406/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle407/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle407/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle408/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle408/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle409/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle409/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle410/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle410/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle411/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle411/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle412/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle412/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle413/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle413/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle414/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle414/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle415/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle415/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle416/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle416/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle417/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle417/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle418/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle418/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle419/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle419/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle420/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle420/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle421/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle421/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle422/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle422/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle423/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle423/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle424/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle424/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle425/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle425/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle426/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle426/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle427/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle427/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle428/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle428/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle429/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle429/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle430/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle430/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle431/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle431/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle432/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle432/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle433/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle433/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle434/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle434/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle435/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle435/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle436/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle436/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle437/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle437/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle438/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle438/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle439/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle439/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle440/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle440/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle441/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle441/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle442/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle442/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle443/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle443/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle444/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle444/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle445/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle445/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle446/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle446/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle447/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle447/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle448/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle448/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle449/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle449/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle450/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle450/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle451/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle451/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle452/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle452/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle453/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle453/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle454/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle454/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle455/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle455/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle456/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle456/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle457/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle457/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle458/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle458/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle459/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle459/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle460/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle460/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle461/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle461/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle462/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle462/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle463/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle463/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle464/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle464/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle465/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle465/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle466/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle466/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle467/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle467/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle468/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle468/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle469/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle469/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle470/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle470/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle471/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle471/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle472/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle472/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle473/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle473/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle474/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle474/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle475/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle475/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle476/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle476/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle477/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle477/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle478/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle478/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle479/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle479/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle480/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle480/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle481/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle481/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle482/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle482/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle483/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle483/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle484/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle484/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle485/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle485/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle486/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle486/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle487/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle487/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle488/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle488/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle489/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle489/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle490/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle490/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle491/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle491/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle492/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle492/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle493/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle493/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle494/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle494/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle495/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle495/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle496/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle496/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle497/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle497/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle498/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle498/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle499/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle499/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle500/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle500/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle501/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle501/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle502/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle502/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle503/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle503/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle504/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle504/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle505/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle505/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle506/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle506/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle507/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle507/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle508/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle508/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle509/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle509/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle510/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle510/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle511/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle511/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle512/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle512/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle513/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle513/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle514/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle514/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle515/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle515/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle516/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle516/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle517/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle517/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle518/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle518/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle519/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle519/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle520/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle520/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle521/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle521/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle522/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle522/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle523/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle523/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle524/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle524/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle525/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle525/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle526/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle526/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle527/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle527/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle528/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle528/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle529/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle529/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle530/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle530/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle531/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle531/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle532/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle532/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle533/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle533/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle534/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle534/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle535/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle535/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle536/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle536/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle537/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle537/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle538/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle538/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle539/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle539/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle540/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle540/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle541/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle541/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle542/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle542/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle543/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle543/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle544/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle544/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle545/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle545/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle546/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle546/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle547/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle547/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle548/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle548/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle549/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle549/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle550/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle550/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle551/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle551/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle552/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle552/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle553/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle553/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle554/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle554/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle555/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle555/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle556/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle556/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle557/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle557/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle558/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle558/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle559/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle559/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle560/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle560/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle561/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle561/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle562/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle562/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle563/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle563/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle564/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle564/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle565/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle565/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle566/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle566/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle567/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle567/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle568/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle568/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle569/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle569/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle570/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle570/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle571/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle571/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle572/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle572/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle573/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle573/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle574/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle574/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle575/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle575/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle576/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle576/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle577/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle577/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle578/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle578/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle579/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle579/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle580/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle580/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle581/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle581/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle582/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle582/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle583/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle583/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle584/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle584/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle585/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle585/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle586/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle586/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle587/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle587/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle588/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle588/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle589/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle589/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle590/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle590/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle591/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle591/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle592/bundle.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/bundle592/version0.0/revision.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/inhabitants" beforeDir="false" afterPath="$PROJECT_DIR$/../glassfish6/glassfish/domains/domain1/osgi-cache/felix/inhabitants" afterDir="false" />
     </list>
     <list id="928d9a44-53b2-4b91-88cf-fe363dc4df9b" name="Changes by andrea" comment="" />
     <list id="a8058811-3d93-4a04-b9fb-b3164bfab7d5" name="Changes by francesco.ronchieri" comment="" />
@@ -60,8 +655,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -75,13 +670,6 @@
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1nkcSs4OzTuTRtDUHdzTjP5Kb3A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -89,7 +677,6 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -99,7 +686,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Google Drive/00 Università/Magistrale/2 Anno/DSMT/LABS/lab_08" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/website/src/main/resources" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -108,54 +695,6 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/RestAPI-1.0-SNAPSHOT/api/table" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;    &quot;name&quot;: &quot;Tavolo9&quot;,&#10;    &quot;numberOfSeat&quot;: 5,&#10;  &quot;bookSession&quot;: &quot;AAFFEC765999&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/RestAPI-1.0-SNAPSHOT/api/table" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;    &quot;name&quot;: &quot;Tavolo4&quot;,&#10;    &quot;numberOfSeat&quot;: 5,&#10;  &quot;bookSession&quot;: &quot;AAFFEC765999&quot;&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080/RestAPI-1.0-SNAPSHOT/api/table" />
-          <option name="urlPath" value="" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="content-type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&#10;    &quot;name&quot;: &quot;Tavolo4&quot;,&#10;    &quot;numberOfSeat&quot;: 5&#10;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/hello-world" />
@@ -201,24 +740,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GlassFish 6.0.01" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.0.01" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="GlassFish 5.1.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.1.0" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/website-1.0-SNAPSHOT/" />
       <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="RestAPI:war exploded">
-          <settings />
-        </artifact>
         <artifact name="ejbs:ejb exploded">
           <settings />
         </artifact>
-        <artifact name="ejbs:ejb exploded2">
-          <settings />
-        </artifact>
-        <artifact name="ejbs:ejb exploded2 archive">
-          <settings />
-        </artifact>
-        <artifact name="website:war exploded">
+        <artifact name="website">
           <settings />
         </artifact>
       </deployment>
@@ -282,27 +812,175 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="RestAPI:war exploded" />
-          <artifact name="website:war exploded" />
-          <artifact name="ejbs:ejb exploded" />
+          <artifact name="website" />
         </option>
       </method>
     </configuration>
-    <configuration name="client#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/client.HTTP" runType="Run single request">
-      <method v="2" />
+    <configuration name="GlassFish 6.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.0.0" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/website-1.0-SNAPSHOT/" />
+      <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="beans">
+          <settings />
+        </artifact>
+        <artifact name="website">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="beans" />
+          <artifact name="website" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="GlassFish 6.0.01" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.0.01" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="beans">
+          <settings />
+        </artifact>
+        <artifact name="website">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="website" />
+          <artifact name="beans" />
+        </option>
+      </method>
     </configuration>
     <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.main" />
+      <item itemvalue="GlassFish Server.GlassFish 5.1.0" />
       <item itemvalue="GlassFish Server.GlassFish 6.0.01" />
+      <item itemvalue="GlassFish Server.GlassFish 6.0.0" />
       <item itemvalue="HTTP Request.generated-requests#1" />
-      <item itemvalue="HTTP Request.client#1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.client#1" />
         <item itemvalue="Application.main" />
         <item itemvalue="HTTP Request.generated-requests#1" />
       </list>
@@ -319,7 +997,11 @@
       <workItem from="1611937532607" duration="2638000" />
       <workItem from="1612014769744" duration="8345000" />
       <workItem from="1612088451647" duration="4750000" />
-      <workItem from="1612109246034" duration="7148000" />
+      <workItem from="1612116610185" duration="264000" />
+      <workItem from="1612123317550" duration="408000" />
+      <workItem from="1612173123870" duration="6790000" />
+      <workItem from="1612180154408" duration="316000" />
+      <workItem from="1612180506645" duration="3763000" />
     </task>
     <servers />
   </component>
@@ -341,74 +1023,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="395" y="131" key="#Inspections" timestamp="1612113255816">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="395" y="131" key="#Inspections/0.40.1536.824@0.40.1536.824" timestamp="1612113255816" />
-    <state x="223" y="41" width="1089" height="823" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612115394156">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="223" y="41" width="1089" height="823" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1536.824@0.40.1536.824" timestamp="1612115394156" />
-    <state x="528" y="254" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612115848026">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="528" y="254" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1536.824@0.40.1536.824" timestamp="1612115848026" />
-    <state x="574" y="159" key="#com.intellij.ide.util.MemberChooser" timestamp="1612113216960">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="574" y="159" key="#com.intellij.ide.util.MemberChooser/0.40.1536.824@0.40.1536.824" timestamp="1612113216960" />
-    <state x="397" y="141" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1612112800772">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="397" y="141" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.40.1536.824@0.40.1536.824" timestamp="1612112800772" />
-    <state x="503" y="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1612115624582">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="503" y="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.1536.824@0.40.1536.824" timestamp="1612115624582" />
-    <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1612115968530">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1612115968530" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612116403008">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612116403008" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612116403007">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612116403007" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612116403007">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612116403007" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612116403007">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612116403007" />
-    <state width="1024" height="361" key="GridCell.Tab.1.bottom" timestamp="1612116403004">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1024" height="361" key="GridCell.Tab.1.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612116403004" />
-    <state width="1024" height="361" key="GridCell.Tab.1.center" timestamp="1612116403004">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1024" height="361" key="GridCell.Tab.1.center/0.40.1536.824@0.40.1536.824" timestamp="1612116403004" />
-    <state width="1024" height="361" key="GridCell.Tab.1.left" timestamp="1612116403004">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1024" height="361" key="GridCell.Tab.1.left/0.40.1536.824@0.40.1536.824" timestamp="1612116403004" />
-    <state width="1024" height="361" key="GridCell.Tab.1.right" timestamp="1612116403004">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1024" height="361" key="GridCell.Tab.1.right/0.40.1536.824@0.40.1536.824" timestamp="1612116403004" />
-    <state x="249" y="40" key="SettingsEditor" timestamp="1612115559152">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="249" y="40" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1612115559152" />
-    <state x="209" y="113" key="new project wizard" timestamp="1612115766621">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="209" y="113" key="new project wizard/0.40.1536.824@0.40.1536.824" timestamp="1612115766621" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

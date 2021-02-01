@@ -54,7 +54,7 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
-      <application-ref ref="RestAPI-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
+      <application-ref ref="testEJB_ejb_exploded" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -109,6 +109,7 @@
         </session-config>
       </web-container>
       <ejb-container>
+        <property name="disable-nonportable-jndi-names" value="true"></property>
         <ejb-timer-service></ejb-timer-service>
       </ejb-container>
       <rest-config></rest-config>
@@ -456,13 +457,15 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
-    <application context-root="/RestAPI-1.0-SNAPSHOT" object-type="user" directory-deployed="true" name="RestAPI-1.0-SNAPSHOT" location="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/">
-      <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEat/RestAPI/target/RestAPI-1.0-SNAPSHOT/"></property>
-      <property name="archiveType" value="war"></property>
-      <property name="defaultAppName" value="RestAPI-1.0-SNAPSHOT"></property>
-      <module name="RestAPI-1.0-SNAPSHOT">
+    <application object-type="user" name="testEJB_ejb_exploded" directory-deployed="true" location="file:/C:/DSMT-PisaEat/PisaEat/out/artifacts/testEJB_ejb_exploded/">
+      <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEat/out/artifacts/testEJB_ejb_exploded/"></property>
+      <property name="org.glassfish.ejb.container.application_unique_id" value="105655882322280448"></property>
+      <property name="archiveType" value="ejb"></property>
+      <property name="defaultAppName" value="testEJB_ejb_exploded"></property>
+      <module name="testEJB_ejb_exploded">
+        <engine sniffer="ejb"></engine>
         <engine sniffer="security"></engine>
-        <engine sniffer="web"></engine>
+        <engine sniffer="weld"></engine>
       </module>
     </application>
   </applications>
