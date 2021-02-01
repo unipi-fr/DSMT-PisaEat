@@ -1,6 +1,8 @@
 package ejbs.interfaces;
 
+import database.exceptions.TableNotFoundException;
 import entities.Table;
+import exceptions.TableAlreadyBookedException;
 import jakarta.ejb.Remote;
 
 import java.util.Collection;
@@ -11,5 +13,5 @@ public interface ITableBean {
 
     Collection<Table> getTables();
 
-    Table bookTable(String idTable);
+    Table bookTable(String idTable, String name) throws TableNotFoundException, TableAlreadyBookedException;
 }

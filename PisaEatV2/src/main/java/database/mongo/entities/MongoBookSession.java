@@ -1,32 +1,29 @@
-package entities;
+package database.mongo.entities;
+
+import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
-import java.io.Serializable;
 
-public class BookSession implements Serializable {
-    private String id;
+public class MongoBookSession {
+    private ObjectId id;
     private String pin;
     private ArrayList<String> users;
     private String booker;
 
 
-    public BookSession(String id, String pin, ArrayList<String> users, String booker) {
+    public MongoBookSession(ObjectId id, String pin, ArrayList<String> users, String booker) {
         this.setId(id);
         this.setPin(pin);
         setUsers(users);
         this.setBooker(booker);
     }
 
-    public BookSession(String booker) {
-        this.booker = booker;
-        users = new ArrayList<>();
-    }
 
-    public String getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
@@ -54,3 +51,4 @@ public class BookSession implements Serializable {
         this.booker = booker;
     }
 }
+

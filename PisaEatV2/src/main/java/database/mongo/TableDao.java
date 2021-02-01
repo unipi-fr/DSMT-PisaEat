@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.combine;
@@ -69,10 +70,14 @@ public class TableDao implements ITableDao {
 
     @Override
     public Table updateTable(Table table) throws TableNotFoundException {
+        Logger logger = Logger.getLogger(getClass().getName());
+
         MongoTable mongoTable = tableToMongoTable(table);
 
+        logger.info("[DEBUG] idTable: " + table.getId());
+
         UpdateResult result = collection.updateOne(
-                eq("_id", table.getId()),
+                eq("_id", mongoTable.getId()),
                 combine(
                         set("name", mongoTable.getName()),
                         set("numberOfSeat", mongoTable.getNumberOfSeat()),
@@ -80,7 +85,11 @@ public class TableDao implements ITableDao {
                 )
         );
 
+        long modifiedCount = result.getModifiedCount();
         long matchedCount = result.getMatchedCount();
+
+        logger.info("[DEBUG] modifiedCount: " + modifiedCount);
+        logger.info("[DEBUG] matchedCount: " + matchedCount);
 
         if (matchedCount == 0) {
             throw new TableNotFoundException();
