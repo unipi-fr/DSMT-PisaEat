@@ -12,6 +12,7 @@
         <module>mongoDao</module>
         <module>model</module>
         <module>interfaces</module>
+        <module>beans</module>
     </modules>
 
     <properties>

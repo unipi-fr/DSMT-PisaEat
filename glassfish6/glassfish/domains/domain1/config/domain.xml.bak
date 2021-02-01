@@ -55,7 +55,7 @@
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
       <application-ref ref="testEJB_ejb_exploded" virtual-servers="server"></application-ref>
-      <application-ref ref="beans" virtual-servers="server"></application-ref>
+      <application-ref ref="PisaEatV2-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -469,15 +469,17 @@
         <engine sniffer="weld"></engine>
       </module>
     </application>
-    <application object-type="user" name="beans" directory-deployed="true" location="file:/C:/DSMT-PisaEat/PisaEat/out/artifacts/beans/">
-      <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEat/out/artifacts/beans/"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="105656036298063872"></property>
-      <property name="archiveType" value="ejb"></property>
-      <property name="defaultAppName" value="beans"></property>
-      <module name="beans">
+    <application context-root="/PisaEatV2-1.0-SNAPSHOT" object-type="user" name="PisaEatV2-1.0-SNAPSHOT" directory-deployed="true" location="file:/C:/DSMT-PisaEat/PisaEatV2/target/PisaEatV2-1.0-SNAPSHOT/">
+      <property name="archiveType" value="war"></property>
+      <property name="appLocation" value="file:/C:/DSMT-PisaEat/PisaEatV2/target/PisaEatV2-1.0-SNAPSHOT/"></property>
+      <property name="org.glassfish.ejb.container.application_unique_id" value="105656398263812096"></property>
+      <property name="defaultAppName" value="PisaEatV2-1.0-SNAPSHOT"></property>
+      <module name="PisaEatV2-1.0-SNAPSHOT">
         <engine sniffer="ejb"></engine>
         <engine sniffer="security"></engine>
         <engine sniffer="weld"></engine>
+        <engine sniffer="jpa"></engine>
+        <engine sniffer="web"></engine>
       </module>
     </application>
   </applications>
