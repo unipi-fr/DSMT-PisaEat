@@ -13,6 +13,9 @@
         <module>model</module>
         <module>interfaces</module>
         <module>beans</module>
+        <module>restAPI</module>
+        <module>website</module>
+        <module>testApp</module>
     </modules>
 
     <properties>
