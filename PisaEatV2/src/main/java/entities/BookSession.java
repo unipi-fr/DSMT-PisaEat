@@ -7,19 +7,22 @@ public class BookSession implements Serializable {
     private String id;
     private String pin;
     private ArrayList<String> users;
-    private String booker;
+    private String bookingName;
 
 
-    public BookSession(String id, String pin, ArrayList<String> users, String booker) {
+    public BookSession(String id, String pin, ArrayList<String> users, String bookingName) {
         this.setId(id);
         this.setPin(pin);
         setUsers(users);
-        this.setBooker(booker);
+        this.setBookingName(bookingName);
     }
 
-    public BookSession(String booker) {
-        this.booker = booker;
+    public BookSession(String bookingName, String pin) {
+        this.bookingName = bookingName;
+        this.pin = pin;
+
         users = new ArrayList<>();
+        users.add(bookingName);
     }
 
     public String getId() {
@@ -46,11 +49,11 @@ public class BookSession implements Serializable {
         this.users = users;
     }
 
-    public String getBooker() {
-        return booker;
+    public String getBookingName() {
+        return bookingName;
     }
 
-    public void setBooker(String booker) {
-        this.booker = booker;
+    public void setBookingName(String bookingName) {
+        this.bookingName = bookingName;
     }
 }

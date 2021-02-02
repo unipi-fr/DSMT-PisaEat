@@ -2,11 +2,14 @@ package database.mongo;
 
 import com.mongodb.client.MongoCollection;
 import database.IBookSessionDao;
+import database.exceptions.BookSessionNotFoundException;
 import database.mongo.entities.MongoBookSession;
 import entities.BookSession;
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
+
+import static com.mongodb.client.model.Filters.eq;
 
 public class BookSessionDao implements IBookSessionDao {
     private final MongoCollection<MongoBookSession> collection;
@@ -28,6 +31,27 @@ public class BookSessionDao implements IBookSessionDao {
         return mongoBookSessionToBookSession(mongoBookSession);
     }
 
+    @Override
+    public BookSession getBookSessionById(String bookSessionId) throws BookSessionNotFoundException {
+        ObjectId id = null;
+
+        try {
+            id = new ObjectId(bookSessionId);
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
+
+        MongoBookSession mongoBookSession = collection.find(
+                eq("_id", id)
+        ).first();
+
+        if (mongoBookSession == null) {
+            throw new BookSessionNotFoundException(bookSessionId);
+        }
+
+        return mongoBookSessionToBookSession(mongoBookSession);
+    }
+
     protected MongoBookSession bookSessionToMongoBookSession(BookSession bookSession) {
         if (bookSession == null) {
             return null;
@@ -36,7 +60,7 @@ public class BookSessionDao implements IBookSessionDao {
         ObjectId id = null;
         String pin = bookSession.getPin();
         ArrayList<String> users = bookSession.getUsers();
-        String booker = bookSession.getBooker();
+        String booker = bookSession.getBookingName();
 
         if (bookSession.getId() != null && !bookSession.getId().trim().isEmpty()) {
             id = new ObjectId(bookSession.getId());
@@ -53,13 +77,12 @@ public class BookSessionDao implements IBookSessionDao {
         String id = null;
         String pin = mongoBookSession.getPin();
         ArrayList<String> users = mongoBookSession.getUsers();
-        String booker = mongoBookSession.getBooker();
+        String booker = mongoBookSession.getBookingName();
 
         if (mongoBookSession.getId() != null) {
             id = mongoBookSession.getId().toHexString();
         }
 
         return new BookSession(id, pin, users, booker);
-
     }
 }
