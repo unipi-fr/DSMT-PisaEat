@@ -1,0 +1,46 @@
+TUTORIAL INSTALLAZIONE SERVER WEB ERLANG:
+
+1) Scaricare installer:
+https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20210105.exe
+
+2) Lanciare installer lasciando tutte le scelte di default
+
+3) Alla fine dell'installazione si sarà aperta una shell; lanciare il comando: pacman -Syu
+
+4) Alla fine di questo comando la shell sarà chiusa; Riaprite la shell da start MSYS2 MSYS
+
+5) lanciare il comando: pacman -Su
+
+6) lanciare il comando: pacman -S git make
+
+7) lanciare il comando: pacman -Ss gcc
+
+8) lanciare il comando: pacman -S mingw-w64-x86_64-gcc
+
+
+L'installazione ora è completata; adesso veniamo al progetto.
+
+
+$ mkdir rest_erlang
+
+$ cd rest_erlang
+
+$ wget https://erlang.mk/erlang.mk
+
+$ make -f erlang.mk bootstrap bootstrap-rel
+
+Sostituire il makefile creato in rest_erlang con quello che ho realizzato
+
+Copiare i tre file .erl nella cartella src nel progetto rest_erlang
+
+
+Inserisci un file .sh nella cartella C:\msys64\etc\profile.d\
+In questo file ci devi mettere il comando per cambiare la variabile path di questa shell in modo tale che veda la cartella bin della tua installazione di erlang. ATTENZIONE AL MODO IN CUI GLIELA INDICATE!
+Ecco la mia versione per esempio: export PATH=$PATH:/c/Programmi/erl-23.1/bin
+
+chiudete la shell e riaprite la shell msys 64 bit
+
+fate cd rest_erlang
+
+
+e poi make run per far partire il server.
