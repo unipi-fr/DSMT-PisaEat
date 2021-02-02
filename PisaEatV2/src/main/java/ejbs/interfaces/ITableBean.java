@@ -1,6 +1,8 @@
 package ejbs.interfaces;
 
+import database.exceptions.BookSessionNotFoundException;
 import database.exceptions.TableNotFoundException;
+import entities.BookSession;
 import entities.Table;
 import exceptions.TableAlreadyBookedException;
 import jakarta.ejb.Remote;
@@ -14,4 +16,8 @@ public interface ITableBean {
     Collection<Table> getTables();
 
     Table bookTable(String idTable, String name) throws TableNotFoundException, TableAlreadyBookedException;
+
+    BookSession getBookSessionByTable(Table table) throws BookSessionNotFoundException;
+
+    BookSession getBookSessionById(String id) throws BookSessionNotFoundException;
 }

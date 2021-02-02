@@ -8,16 +8,23 @@ public class MongoBookSession {
     private ObjectId id;
     private String pin;
     private ArrayList<String> users;
-    private String booker;
+    private String bookingName;
 
+    public MongoBookSession() {
+    }
 
-    public MongoBookSession(ObjectId id, String pin, ArrayList<String> users, String booker) {
+    public MongoBookSession(String pin, ArrayList<String> users, String bookingName) {
+        this.setPin(pin);
+        setUsers(users);
+        this.setBookingName(bookingName);
+    }
+
+    public MongoBookSession(ObjectId id, String pin, ArrayList<String> users, String bookingName) {
         this.setId(id);
         this.setPin(pin);
         setUsers(users);
-        this.setBooker(booker);
+        this.setBookingName(bookingName);
     }
-
 
     public ObjectId getId() {
         return id;
@@ -40,15 +47,15 @@ public class MongoBookSession {
     }
 
     public void setUsers(ArrayList<String> users) {
-        this.users = users;
+        this.users = new ArrayList<>(users);
     }
 
-    public String getBooker() {
-        return booker;
+    public String getBookingName() {
+        return bookingName;
     }
 
-    public void setBooker(String booker) {
-        this.booker = booker;
+    public void setBookingName(String bookingName) {
+        this.bookingName = bookingName;
     }
 }
 

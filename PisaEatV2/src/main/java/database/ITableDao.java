@@ -10,7 +10,7 @@ public interface ITableDao {
 
     Collection<Table> getTables();
 
-    Table getTableById(String idTable) throws TableNotFoundException, IllegalArgumentException;
+    Table getTableById(String tableId) throws TableNotFoundException, IllegalArgumentException;
 
     Table updateTable(Table table) throws TableNotFoundException;
 }

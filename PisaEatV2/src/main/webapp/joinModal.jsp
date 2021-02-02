@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<button type="button" class="btn btn-md btn-dark" data-toggle="modal" data-target="#modal${table.id}">Book</button>
+<button type="button" class="btn btn-md btn-dark" data-toggle="modal" data-target="#modal${table.id}">Join</button>
 
 <!-- The Modal -->
 <div class="modal fade" id="modal${table.id}">
@@ -20,23 +20,30 @@
                 <div class="modal-body">
 
                     <label>
-                        <input value="bookOperation" name="operation" hidden>
+                        <input value="joinOperation" name="operation" hidden>
                     </label>
 
                     <div class="form-group">
                         <label for="name${table.id}"> Name: </label>
-                        <input type="text" class="form-control" placeholder="Enter your name" id="name${table.id}" name = "bookingName">
+                        <input type="text" class="form-control" placeholder="Enter your name" id="name${table.id}"
+                               name="bookingName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pin${table.id}"> pin: </label>
+                        <input type="text" class="form-control" placeholder="Enter The pin to join the table" id="pin${table.id}"
+                               name="pin">
                     </div>
 
                     <label>
-                        <input value="${table.id}" name="tableId" hidden>
+                        <input value="${table.bookSessionId}" name="bookSessionId" hidden>
                     </label>
 
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-md btn-dark">Confirm Book</button>
+                    <button type="submit" class="btn btn-md btn-dark">Sit down</button>
                 </div>
 
             </form>

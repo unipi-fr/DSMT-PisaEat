@@ -10,9 +10,13 @@
 <%@include file="navbar.jsp" %>
 
 <main>
-
     <div class="py-5">
         <div class="container">
+            <c:if test="${not empty errorMessage}">
+                <div class="alert alert-danger mb-5" role="alert">
+                        ${errorMessage}
+                </div>
+            </c:if>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <table>

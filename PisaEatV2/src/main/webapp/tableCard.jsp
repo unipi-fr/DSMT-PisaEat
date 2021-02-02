@@ -15,7 +15,14 @@
                 </div>
 
                 <div class="col-6 d-flex justify-content-center align-items-center">
-                    <jsp:include page="bookModal.jsp"/>
+                    <c:choose>
+                        <c:when test="${empty table.bookSessionId}">
+                            <jsp:include page="bookModal.jsp"/>
+                        </c:when>
+                        <c:otherwise>
+                            <jsp:include page="joinModal.jsp"/>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
 
