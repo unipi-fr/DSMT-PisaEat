@@ -25,7 +25,10 @@ public class HomeServlet extends HttpServlet {
         Logger logger = Logger.getLogger(getClass().getName());
         logger.info("[DEBUG] inside the service method of HomeServlet");
 
+        String bookSessionId = (String) req.getSession().getAttribute("bookSessionId");
+
         req.setAttribute("Tables", tableBean.getTables());
+        req.setAttribute("bookSessionId", bookSessionId);
 
         getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
     }

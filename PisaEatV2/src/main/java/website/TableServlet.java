@@ -13,6 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -38,16 +39,25 @@ public class TableServlet extends HttpServlet {
 
         String name;
 
+        HttpSession session = req.getSession(true);
+
+        if (session.getAttribute("name") != null && session.getAttribute("bookSessionId") != null) {
+            res.sendRedirect("BookingServlet");
+            return;
+        }
+
         switch (op) {
             case "bookOperation":
-                name = req.getParameter("bookingName");
+                name = req.getParameter("name");
                 String tableId = req.getParameter("tableId");
 
                 try {
                     BookSession bookSession = bookTable(tableId, name);
 
-                    req.setAttribute("bookSession", bookSession);
-                    getServletContext().getRequestDispatcher("/tablePage.jsp").forward(req, res);
+                    session.setAttribute("bookSessionId", bookSession.getId());
+                    session.setAttribute("name", name);
+
+                    res.sendRedirect("BookingServlet");
                 } catch (TableAlreadyBookedException | BookSessionNotFoundException | TableNotFoundException e) {
                     logger.info("[DEBUG] " + e.getMessage());
 
@@ -57,15 +67,17 @@ public class TableServlet extends HttpServlet {
 
                 break;
             case "joinOperation":
-                name = req.getParameter("bookingName");
+                name = req.getParameter("name");
                 String bookSessionId = req.getParameter("bookSessionId");
                 String pin = req.getParameter("pin");
 
                 try {
                     BookSession bookSession = joinTable(bookSessionId, name, pin);
 
-                    req.setAttribute("bookSession", bookSession);
-                    getServletContext().getRequestDispatcher("/tablePage.jsp").forward(req, res);
+                    session.setAttribute("bookSessionId", bookSession.getId());
+                    session.setAttribute("name", name);
+
+                    res.sendRedirect("BookingServlet");
                 } catch (BookSessionNotFoundException | InvalidPinException e) {
                     logger.info("[DEBUG] " + e.getMessage());
 
@@ -99,12 +111,7 @@ public class TableServlet extends HttpServlet {
             throw new IllegalArgumentException();
         }
 
-        BookSession bookSession = tableBean.getBookSessionById(bookSessionId);
-
-
-        if (!bookSession.getPin().equals(pin)) {
-            throw new InvalidPinException();
-        }
+        BookSession bookSession = tableBean.joinBookSession(bookSessionId, name, pin);
 
         return bookSession;
     }

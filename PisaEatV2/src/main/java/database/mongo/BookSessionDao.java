@@ -1,8 +1,10 @@
 package database.mongo;
 
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.result.UpdateResult;
 import database.IBookSessionDao;
 import database.exceptions.BookSessionNotFoundException;
+import database.exceptions.TableNotFoundException;
 import database.mongo.entities.MongoBookSession;
 import entities.BookSession;
 import org.bson.types.ObjectId;
@@ -10,6 +12,7 @@ import org.bson.types.ObjectId;
 import java.util.ArrayList;
 
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Updates.push;
 
 public class BookSessionDao implements IBookSessionDao {
     private final MongoCollection<MongoBookSession> collection;
@@ -50,6 +53,28 @@ public class BookSessionDao implements IBookSessionDao {
         }
 
         return mongoBookSessionToBookSession(mongoBookSession);
+    }
+
+    @Override
+    public void addUserToBookSession(String bookSessionId, String name) throws BookSessionNotFoundException {
+        ObjectId id = null;
+
+        try {
+            id = new ObjectId(bookSessionId);
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
+
+        UpdateResult result  = collection.updateOne(
+                eq("_id", id),
+                push("users", name)
+        );
+
+        long matchedCount = result.getMatchedCount();
+
+        if (matchedCount == 0) {
+            throw new BookSessionNotFoundException(bookSessionId);
+        }
     }
 
     protected MongoBookSession bookSessionToMongoBookSession(BookSession bookSession) {

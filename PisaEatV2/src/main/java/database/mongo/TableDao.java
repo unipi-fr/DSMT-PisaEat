@@ -12,8 +12,6 @@ import org.bson.types.ObjectId;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
-import java.util.logging.Logger;
 
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.combine;
@@ -65,7 +63,7 @@ public class TableDao implements ITableDao {
                 eq("_id", id)
         ).first();
 
-        if(mongoTable == null)
+        if (mongoTable == null)
             throw new TableNotFoundException(tableId);
 
         return mongoTableToTable(mongoTable);
@@ -84,7 +82,6 @@ public class TableDao implements ITableDao {
                 )
         );
 
-        long modifiedCount = result.getModifiedCount();
         long matchedCount = result.getMatchedCount();
 
         if (matchedCount == 0) {

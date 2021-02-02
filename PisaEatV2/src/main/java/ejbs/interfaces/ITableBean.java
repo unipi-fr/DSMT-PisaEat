@@ -4,6 +4,7 @@ import database.exceptions.BookSessionNotFoundException;
 import database.exceptions.TableNotFoundException;
 import entities.BookSession;
 import entities.Table;
+import exceptions.InvalidPinException;
 import exceptions.TableAlreadyBookedException;
 import jakarta.ejb.Remote;
 
@@ -15,9 +16,11 @@ public interface ITableBean {
 
     Collection<Table> getTables();
 
-    Table bookTable(String idTable, String name) throws TableNotFoundException, TableAlreadyBookedException;
+    Table bookTable(String tableId, String name) throws TableNotFoundException, TableAlreadyBookedException;
 
     BookSession getBookSessionByTable(Table table) throws BookSessionNotFoundException;
+
+    BookSession joinBookSession(String bookSessionId, String name, String pin) throws BookSessionNotFoundException, InvalidPinException;
 
     BookSession getBookSessionById(String id) throws BookSessionNotFoundException;
 }

@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="col">
     <div class="card shadow-lg">
@@ -17,10 +18,10 @@
                 <div class="col-6 d-flex justify-content-center align-items-center">
                     <c:choose>
                         <c:when test="${empty table.bookSessionId}">
-                            <jsp:include page="bookModal.jsp"/>
+                            <jsp:include page="bookButton.jsp"/>
                         </c:when>
                         <c:otherwise>
-                            <jsp:include page="joinModal.jsp"/>
+                            <jsp:include page="joinButton.jsp"/>
                         </c:otherwise>
                     </c:choose>
                 </div>

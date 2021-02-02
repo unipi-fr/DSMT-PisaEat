@@ -7,15 +7,15 @@ import database.exceptions.TableNotFoundException;
 import database.mongo.BookSessionDao;
 import database.mongo.MongoDbConnector;
 import database.mongo.TableDao;
+import ejbs.interfaces.ITableBean;
 import entities.BookSession;
 import entities.Table;
-import ejbs.interfaces.ITableBean;
+import exceptions.InvalidPinException;
 import exceptions.TableAlreadyBookedException;
 import jakarta.ejb.Stateless;
 
 import java.security.SecureRandom;
 import java.util.Collection;
-import java.util.logging.Logger;
 
 //@Stateless(name = "TableEJB")
 @Stateless
@@ -29,9 +29,8 @@ public class TableBean implements ITableBean {
     private String generatePin() {
         SecureRandom random = new SecureRandom();
         int num = random.nextInt(10000);
-        String pin = String.format("%04d", num);
 
-        return pin;
+        return String.format("%04d", num);
     }
 
     @Override
@@ -45,19 +44,18 @@ public class TableBean implements ITableBean {
     }
 
     @Override
-    public Table bookTable(String idTable, String name) throws TableNotFoundException, TableAlreadyBookedException {
-        Logger logger = Logger.getLogger(getClass().getName());
+    public Table bookTable(String tableId, String name) throws TableNotFoundException, TableAlreadyBookedException {
+        if (name == null) {
+            throw new IllegalArgumentException();
+        }
 
         BookSession bookSession = new BookSession(name, generatePin());
 
-        Table table = iTableDao.getTableById(idTable);
+        Table table = iTableDao.getTableById(tableId);
 
-        if(table.getBookSessionId() != null) {
-            logger.info("[DEBUG] " + table.getBookSessionId());
+        if (table.getBookSessionId() != null) {
             throw new TableAlreadyBookedException();
         }
-
-        logger.info("[DEBUG] " + table.getName());
 
         bookSession = iBookSessionDao.createBookSession(bookSession);
 
@@ -73,6 +71,23 @@ public class TableBean implements ITableBean {
         }
 
         return getBookSessionById(table.getBookSessionId());
+    }
+
+    @Override
+    public BookSession joinBookSession(String bookSessionId, String name, String pin) throws BookSessionNotFoundException, InvalidPinException {
+        if (bookSessionId == null || name == null || pin == null) {
+            throw new IllegalArgumentException();
+        }
+
+        BookSession bookSession = getBookSessionById(bookSessionId);
+
+        if (!bookSession.getPin().equals(pin)) {
+            throw new InvalidPinException();
+        }
+
+        iBookSessionDao.addUserToBookSession(bookSessionId, name);
+
+        return getBookSessionById(bookSessionId);
     }
 
     @Override
