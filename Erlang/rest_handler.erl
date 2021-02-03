@@ -5,8 +5,7 @@
 		allowed_methods/2,
 		content_types_provided/2,
 		content_types_accepted/2,
-		handle_get_text/2,
-		get_help_text/2,
+		get_help_json/2,
         handle_get_json/2,
         get_messages_json/2,
         handle_post_json/2,
@@ -37,8 +36,7 @@ allowed_methods(Req, State) ->
 content_types_provided(Req, State) ->
     io:format("content_types_provided Chiamata\n"),
     {[
-      %{<<"application/json">>, handle_get_json},
-      {<<"text/plain">>, handle_get_text}
+        {<<"application/json">>, handle_get_json}
      ], Req, State}.
 
 
@@ -50,19 +48,11 @@ content_types_accepted(Req, State) ->
      ], Req, State}.
 
 
-% Utilizza lo stato iniziale del server per scegliere la funzione giusta
-handle_get_text(Req, #state{op=Op} = State) ->
-    io:format("handle_get_text Chiamata con operazione ~w\n", [Op]),
-    {Body_resp, Req_resp, State_resp} = case Op of % assegno ai tre atom di risposta il risultato del case
-        help ->
-            get_help_text(Req, State)
-    end,
-    {Body_resp, Req_resp, State_resp}.
-
-
 handle_get_json(Req, #state{op=Op} = State) ->
     io:format("handle_get_json Chiamata con operazione ~w\n", [Op]),
     {Body_resp, Req_resp, State_resp} = case Op of
+        help ->
+            get_help_json(Req, State);
         chat ->
 			get_messages_json(Req, State)
     end,
@@ -80,20 +70,14 @@ handle_post_json(Req, #state{op=Op} = State) ->
 
 % TODO: AGGIUSTARE I PERCORSI STAMPATI E RIPULIRE IL MESSAGGIO
 % ritorna messaggio per sapere cosa sia possibile fare
-get_help_text(Req, State) ->
-    io:format("get_help_text Chiamata\n"),
-    {ok, Recordfilename} = application:get_env(rest_erlang, records_file_name),
-    {ok, Statefilename} = application:get_env(rest_erlang, state_file_name),
-    Body = "
-            Risorse disponibili:~n
-            - GET /api/chat/ID recupero file json con lista messaggi inviati nella sessione ID
-            - POST /api/chat/ID invio file json con messaggio da salvare nella sessione ID
-            - GET /help recupera pagina help 
-            - records_file_name: ~s
-            - state_file_name: ~s
-            ",
-    Body_resp = io_lib:format(Body, [Recordfilename, Statefilename]),
-    {Body_resp, Req, State}.
+get_help_json(Req, State) ->
+    io:format("get_help_json Chiamata\n"),
+    Body = "{
+    \"GET /help\": \"retrieve help json file\",
+    \"GET /api/chat/ID\": \"retrieve a json file with a list of all messages sent in the session ID\",
+    \"POST /api/chat/ID\": \"send a message in the form of a json file to be saved in the session ID\"
+}",
+    {Body, Req, State}.
 
 
 % TODO: STUDIARE E IMPLEMENTARE COME LEGGERE E RITORNARE UN JSON CON LA LISTA DEI MESSAGGI
@@ -101,7 +85,7 @@ get_messages_json(Req, State) ->
     SessionId = cowboy_req:binding(sessionId, Req),
     io:format("get_messages_json Chiamata con session id = ~w\n", SessionId),
     Body = "{\"username\": \"tizio\", \"message\": \"Daje\"}",
-    {list_to_binary(Body), Req, State}.
+    {Body, Req, State}.
 
 % TODO: STUDIARE E IMPLEMENTARE COME RECUPERARE UN JSON DALLA RICHIESTA,
 % SALVARLO NEL DB E RITORNARE UN MESSAGGIO OK
@@ -109,6 +93,5 @@ post_message_json(Req, State) ->
     SessionId = cowboy_req:binding(sessionId, Req),
     io:format("ritorna_post Chiamata con session id = ~w\n", SessionId),
     Body = "{\"username\": \"tizio\", \"message\": \"Daje\"}",
-    {list_to_binary(Body), Req, State}.
+    {Body, Req, State}.
 
-    
