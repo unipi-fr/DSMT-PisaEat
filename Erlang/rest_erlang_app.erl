@@ -10,7 +10,8 @@ start(_Type, _Args) ->
         {'_', [
 				{"/", rest_handler, [help]},
 				{"/help", rest_handler, [help]},
-				{"/api/chat/:sessionId", rest_handler, [chat]}
+				{"/api/chat/:session_id", rest_handler, [chat]},
+        {"/api/chat/write/:session_id", rest_handler, [message]}
 			  ]}
     ]),
     {ok, _} = cowboy:start_clear(my_http_listener,

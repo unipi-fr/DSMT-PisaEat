@@ -62,7 +62,7 @@ handle_get_json(Req, #state{op=Op} = State) ->
 handle_post_json(Req, #state{op=Op} = State) ->
     io:format("handle_post_json Chiamata con operazione ~w\n", [Op]),
     {Body_resp, Req_resp, State_resp} = case Op of
-        chat ->
+        message ->
             post_message_json(Req, State)
     end,
     {Body_resp, Req_resp, State_resp}.
@@ -75,23 +75,28 @@ get_help_json(Req, State) ->
     Body = "{
     \"GET /help\": \"retrieve help json file\",
     \"GET /api/chat/ID\": \"retrieve a json file with a list of all messages sent in the session ID\",
-    \"POST /api/chat/ID\": \"send a message in the form of a json file to be saved in the session ID\"
+    \"POST /api/chat/write/ID\": \"send a message in the form of a json file to be saved in the session ID\"
 }",
     {Body, Req, State}.
 
 
 % TODO: STUDIARE E IMPLEMENTARE COME LEGGERE E RITORNARE UN JSON CON LA LISTA DEI MESSAGGI
 get_messages_json(Req, State) ->
-    SessionId = cowboy_req:binding(sessionId, Req),
-    io:format("get_messages_json Chiamata con session id = ~w\n", SessionId),
+    SessionId = cowboy_req:binding(session_id, Req),
+    SessionIdList = binary_to_list(SessionId),
+    io:format("get_messages_json Chiamata con session id = ~p\n", [SessionIdList]),
     Body = "{\"username\": \"tizio\", \"message\": \"Daje\"}",
     {Body, Req, State}.
 
 % TODO: STUDIARE E IMPLEMENTARE COME RECUPERARE UN JSON DALLA RICHIESTA,
 % SALVARLO NEL DB E RITORNARE UN MESSAGGIO OK
 post_message_json(Req, State) ->
-    SessionId = cowboy_req:binding(sessionId, Req),
-    io:format("ritorna_post Chiamata con session id = ~w\n", SessionId),
-    Body = "{\"username\": \"tizio\", \"message\": \"Daje\"}",
-    {Body, Req, State}.
+    SessionId = cowboy_req:binding(session_id, Req),
+    SessionIdList = binary_to_list(SessionId),
+    io:format("post_message_json Chiamata con session id = ~p\n", [SessionIdList]),
+    Req_resp = cowboy_req:reply(201,
+        #{<<"content-type">> => <<"text/plain">>},
+        <<"Message saved successfully">>,
+        Req),
+    {true, Req_resp, State}.
 
