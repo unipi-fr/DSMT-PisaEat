@@ -7,7 +7,11 @@
 
 <style>
     body {
-        padding-top: 5rem;
+        padding-top: 4rem;
+    }
+
+    .vh-60{
+        height: 60vh!important;
     }
 </style>
 
