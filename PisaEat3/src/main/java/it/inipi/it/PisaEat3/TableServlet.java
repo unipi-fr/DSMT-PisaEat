@@ -1,13 +1,13 @@
-package website;
+package it.inipi.it.PisaEat3;
 
-import exceptions.BookSessionNotFoundException;
-import exceptions.TableNotFoundException;
-import ejbs.interfaces.ISingletonTableBean;
-import ejbs.interfaces.ITableBean;
 import entities.BookSession;
 import entities.Table;
+import exceptions.BookSessionNotFoundException;
 import exceptions.InvalidPinException;
 import exceptions.TableAlreadyBookedException;
+import exceptions.TableNotFoundException;
+import interfaces.ISingletonTableBean;
+import interfaces.ITableBean;
 import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,8 +17,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 @WebServlet(name = "TableServlet", value = "/TableServlet")
@@ -33,7 +33,7 @@ public class TableServlet extends HttpServlet {
     ISingletonTableBean singletonTableBean;
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
     }
 
@@ -117,8 +117,7 @@ public class TableServlet extends HttpServlet {
             throw new IllegalArgumentException();
         }
 
-        BookSession bookSession = singletonTableBean.joinBookSession(bookSessionId, name, pin).get();
-
-        return bookSession;
+        Future<BookSession> bookSession = singletonTableBean.joinBookSession(bookSessionId, name, pin);
+        return bookSession.get();
     }
 }
