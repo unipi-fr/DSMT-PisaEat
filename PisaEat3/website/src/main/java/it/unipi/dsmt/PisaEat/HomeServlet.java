@@ -1,4 +1,4 @@
-package it.inipi.it.PisaEat3;
+package it.unipi.dsmt.PisaEat;
 
 import entities.Table;
 import interfaces.ITableBean;

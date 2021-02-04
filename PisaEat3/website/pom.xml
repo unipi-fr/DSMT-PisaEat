@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>it.inipi.it</groupId>
-    <artifactId>PisaEat3</artifactId>
+    <groupId>it.unipi.dsmt</groupId>
+    <artifactId>PisaEat</artifactId>
     <version>3.0</version>
-    <name>PisaEat3</name>
+    <name>PisaEat</name>
     <packaging>war</packaging>
 
     <properties>
@@ -16,28 +16,11 @@
         <junit.version>5.7.0</junit.version>
     </properties>
 
-    <modules>
-        <module>ejbs-interfaces</module>
-        <module>ejbs</module>
-        <module>website</module>
-    </modules>
-
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>9.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.mvc</groupId>
-            <artifactId>jakarta.mvc-api</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.ws</groupId>
-            <artifactId>jakarta.xml.ws-api</artifactId>
-            <version>3.0.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
