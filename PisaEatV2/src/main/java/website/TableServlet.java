@@ -1,7 +1,7 @@
 package website;
 
-import database.exceptions.BookSessionNotFoundException;
-import database.exceptions.TableNotFoundException;
+import exceptions.BookSessionNotFoundException;
+import exceptions.TableNotFoundException;
 import ejbs.interfaces.ISingletonTableBean;
 import ejbs.interfaces.ITableBean;
 import entities.BookSession;

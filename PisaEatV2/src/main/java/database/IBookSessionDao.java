@@ -1,6 +1,6 @@
 package database;
 
-import database.exceptions.BookSessionNotFoundException;
+import exceptions.BookSessionNotFoundException;
 import entities.BookSession;
 
 public interface IBookSessionDao {

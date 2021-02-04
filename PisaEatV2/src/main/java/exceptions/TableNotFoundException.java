@@ -1,4 +1,4 @@
-package database.exceptions;
+package exceptions;
 
 public class TableNotFoundException extends Exception {
     public TableNotFoundException() {

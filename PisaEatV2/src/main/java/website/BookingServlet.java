@@ -1,12 +1,8 @@
 package website;
 
-import database.exceptions.BookSessionNotFoundException;
-import database.exceptions.TableNotFoundException;
+import exceptions.BookSessionNotFoundException;
 import ejbs.interfaces.ITableBean;
 import entities.BookSession;
-import entities.Table;
-import exceptions.InvalidPinException;
-import exceptions.TableAlreadyBookedException;
 import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

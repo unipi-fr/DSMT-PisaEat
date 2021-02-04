@@ -1,6 +1,6 @@
 package database;
 
-import database.exceptions.TableNotFoundException;
+import exceptions.TableNotFoundException;
 import entities.Table;
 
 import java.util.Collection;

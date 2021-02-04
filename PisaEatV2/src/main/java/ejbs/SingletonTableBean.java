@@ -1,7 +1,7 @@
 package ejbs;
 
-import database.exceptions.BookSessionNotFoundException;
-import database.exceptions.TableNotFoundException;
+import exceptions.BookSessionNotFoundException;
+import exceptions.TableNotFoundException;
 import ejbs.interfaces.ISingletonTableBean;
 import ejbs.tasks.BookTableTask;
 import ejbs.tasks.JoinBookSessionTask;
@@ -14,17 +14,16 @@ import jakarta.ejb.Asynchronous;
 import jakarta.ejb.Singleton;
 import jakarta.enterprise.concurrent.ManagedExecutorService;
 
-import java.util.Collection;
 import java.util.concurrent.Future;
 
 @Singleton(name = "SingletonTableEJB")
-public class SingletonTableBeanBean implements ISingletonTableBean {
+public class SingletonTableBean implements ISingletonTableBean {
 
     @SuppressWarnings("EjbEnvironmentInspection")
     @Resource(name = "concurrent/__defaultManagedExecutorService")
     ManagedExecutorService executorService;
 
-    public SingletonTableBeanBean() {
+    public SingletonTableBean() {
     }
 
     @Override

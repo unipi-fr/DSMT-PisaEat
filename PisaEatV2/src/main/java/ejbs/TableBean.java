@@ -2,16 +2,13 @@ package ejbs;
 
 import database.IBookSessionDao;
 import database.ITableDao;
-import database.exceptions.BookSessionNotFoundException;
-import database.exceptions.TableNotFoundException;
+import exceptions.BookSessionNotFoundException;
 import database.mongo.BookSessionDao;
 import database.mongo.MongoDbConnector;
 import database.mongo.TableDao;
 import ejbs.interfaces.ITableBean;
 import entities.BookSession;
 import entities.Table;
-import exceptions.InvalidPinException;
-import exceptions.TableAlreadyBookedException;
 import jakarta.ejb.Stateless;
 
 import java.security.SecureRandom;

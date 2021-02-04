@@ -1,4 +1,4 @@
-package database.exceptions;
+package exceptions;
 
 public class BookSessionNotFoundException extends Exception {
     public BookSessionNotFoundException() {

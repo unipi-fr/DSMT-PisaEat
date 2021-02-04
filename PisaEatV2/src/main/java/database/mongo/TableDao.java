@@ -4,7 +4,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.result.UpdateResult;
 import database.ITableDao;
-import database.exceptions.TableNotFoundException;
+import exceptions.TableNotFoundException;
 import database.mongo.entities.MongoTable;
 import entities.Table;
 import org.bson.types.ObjectId;
