@@ -2,6 +2,7 @@ package website;
 
 import database.exceptions.BookSessionNotFoundException;
 import database.exceptions.TableNotFoundException;
+import ejbs.interfaces.ISingletonTableBean;
 import ejbs.interfaces.ITableBean;
 import entities.BookSession;
 import entities.Table;
@@ -16,6 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 import java.util.logging.Logger;
 
 @WebServlet(name = "TableServlet", value = "/TableServlet")
@@ -25,6 +27,9 @@ public class TableServlet extends HttpServlet {
 
     @EJB
     ITableBean tableBean;
+
+    @EJB
+    ISingletonTableBean singletonTableBean;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -58,7 +63,7 @@ public class TableServlet extends HttpServlet {
                     session.setAttribute("name", name);
 
                     res.sendRedirect("BookingServlet");
-                } catch (TableAlreadyBookedException | BookSessionNotFoundException | TableNotFoundException e) {
+                } catch (TableAlreadyBookedException | BookSessionNotFoundException | TableNotFoundException | ExecutionException | InterruptedException e) {
                     logger.info("[DEBUG] " + e.getMessage());
 
                     req.setAttribute("errorMessage", e.getMessage());
@@ -78,7 +83,7 @@ public class TableServlet extends HttpServlet {
                     session.setAttribute("name", name);
 
                     res.sendRedirect("BookingServlet");
-                } catch (BookSessionNotFoundException | InvalidPinException e) {
+                } catch (BookSessionNotFoundException | InvalidPinException | ExecutionException | InterruptedException e) {
                     logger.info("[DEBUG] " + e.getMessage());
 
                     req.setAttribute("errorMessage", e.getMessage());
@@ -92,26 +97,26 @@ public class TableServlet extends HttpServlet {
         }
     }
 
-    private BookSession bookTable(String tableId, String name) throws TableAlreadyBookedException, TableNotFoundException, BookSessionNotFoundException {
+    private BookSession bookTable(String tableId, String name) throws TableAlreadyBookedException, TableNotFoundException, BookSessionNotFoundException, ExecutionException, InterruptedException {
         logger.info("[DEBUG] inside the bookTable method of TableServlet");
 
         if (tableId == null || name == null) {
             throw new IllegalArgumentException();
         }
 
-        Table table = tableBean.bookTable(tableId, name);
+        Table table = singletonTableBean.bookTable(tableId, name).get();
 
         return tableBean.getBookSessionByTable(table);
     }
 
-    private BookSession joinTable(String bookSessionId, String name, String pin) throws BookSessionNotFoundException, InvalidPinException {
+    private BookSession joinTable(String bookSessionId, String name, String pin) throws BookSessionNotFoundException, InvalidPinException, ExecutionException, InterruptedException {
         logger.info("[DEBUG] inside the joinTable method of TableServlet");
 
         if (bookSessionId == null || name == null || pin == null) {
             throw new IllegalArgumentException();
         }
 
-        BookSession bookSession = tableBean.joinBookSession(bookSessionId, name, pin);
+        BookSession bookSession = singletonTableBean.joinBookSession(bookSessionId, name, pin).get();
 
         return bookSession;
     }

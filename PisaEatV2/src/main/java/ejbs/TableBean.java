@@ -43,26 +43,6 @@ public class TableBean implements ITableBean {
         return iTableDao.getTables();
     }
 
-    @Override
-    public Table bookTable(String tableId, String name) throws TableNotFoundException, TableAlreadyBookedException {
-        if (name == null) {
-            throw new IllegalArgumentException();
-        }
-
-        BookSession bookSession = new BookSession(name, generatePin());
-
-        Table table = iTableDao.getTableById(tableId);
-
-        if (table.getBookSessionId() != null) {
-            throw new TableAlreadyBookedException();
-        }
-
-        bookSession = iBookSessionDao.createBookSession(bookSession);
-
-        table.setBookSessionId(bookSession.getId());
-
-        return iTableDao.updateTable(table);
-    }
 
     @Override
     public BookSession getBookSessionByTable(Table table) throws BookSessionNotFoundException {
@@ -71,23 +51,6 @@ public class TableBean implements ITableBean {
         }
 
         return getBookSessionById(table.getBookSessionId());
-    }
-
-    @Override
-    public BookSession joinBookSession(String bookSessionId, String name, String pin) throws BookSessionNotFoundException, InvalidPinException {
-        if (bookSessionId == null || name == null || pin == null) {
-            throw new IllegalArgumentException();
-        }
-
-        BookSession bookSession = getBookSessionById(bookSessionId);
-
-        if (!bookSession.getPin().equals(pin)) {
-            throw new InvalidPinException();
-        }
-
-        iBookSessionDao.addUserToBookSession(bookSessionId, name);
-
-        return getBookSessionById(bookSessionId);
     }
 
     @Override

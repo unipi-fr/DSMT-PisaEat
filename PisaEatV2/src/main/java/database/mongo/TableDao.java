@@ -70,6 +70,26 @@ public class TableDao implements ITableDao {
     }
 
     @Override
+    public Table getTableBySessionId(String bookSessionId) throws TableNotFoundException, IllegalArgumentException {
+        ObjectId id = null;
+
+        try {
+            id = new ObjectId(bookSessionId);
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
+
+        MongoTable mongoTable = collection.find(
+                eq("bookSessionId", id)
+        ).first();
+
+        if (mongoTable == null)
+            throw new TableNotFoundException("bookSessionId("+bookSessionId+")");
+
+        return mongoTableToTable(mongoTable);
+    }
+
+    @Override
     public Table updateTable(Table table) throws TableNotFoundException {
         MongoTable mongoTable = tableToMongoTable(table);
 

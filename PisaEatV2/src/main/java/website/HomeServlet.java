@@ -13,8 +13,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 @WebServlet(name = "HomeServlet", value = "/HomeServlet")
@@ -31,11 +34,11 @@ public class HomeServlet extends HttpServlet {
         Logger logger = Logger.getLogger(getClass().getName());
         logger.info("[DEBUG] inside the service method of HomeServlet");
 
-        Table table = new Table("Tavolo del Thread", 1024, null);
+        Collection<Table> tables = tableBean.getTables();
 
         String bookSessionId = (String) req.getSession().getAttribute("bookSessionId");
 
-        req.setAttribute("Tables", tableBean.getTables());
+        req.setAttribute("Tables", tables);
         req.setAttribute("bookSessionId", bookSessionId);
 
         getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
