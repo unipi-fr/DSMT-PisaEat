@@ -8,23 +8,24 @@ import entities.BookSession;
 import entities.Table;
 import exceptions.InvalidPinException;
 import exceptions.TableAlreadyBookedException;
+import jakarta.annotation.Resource;
 import jakarta.ejb.Asynchronous;
+import jakarta.ejb.Singleton;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.enterprise.concurrent.ManagedThreadFactory;
 
-import javax.annotation.Resource;
-import javax.ejb.Singleton;
-import javax.enterprise.concurrent.ManagedExecutorService;
-import javax.enterprise.concurrent.ManagedThreadFactory;
 import java.util.Collection;
 import java.util.concurrent.Future;
 
-@Singleton(mappedName = "SingletonTableEJB")
+@Singleton(name = "SingletonTableEJB")
 public class SingletonTableBeanBean implements ISingletonTableBean {
 
     @SuppressWarnings("EjbEnvironmentInspection")
-    @Resource(name = "java:comp/DefaultManagedThreadFactory")
+    @Resource(name = "concurrent/__defaultManagedThreadFactory")
     ManagedThreadFactory threadFactory;
 
-    @Resource(name = "java:comp/DefaultManagedExecutorService")
+    @SuppressWarnings("EjbEnvironmentInspection")
+    @Resource(name = "concurrent/__defaultManagedExecutorService")
     ManagedExecutorService executorService;
 
     public SingletonTableBeanBean() {
