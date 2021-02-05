@@ -14,7 +14,7 @@ start(_Type, _Args) ->
 			  ]}
     ]),
     {ok, _} = cowboy:start_clear(my_http_listener,
-        [{port, 8080}],
+        [{port, 8081}],
         #{env => #{dispatch => Dispatch}}
     ),
     rest_erlang_sup:start_link().
