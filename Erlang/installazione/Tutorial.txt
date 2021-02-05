@@ -43,4 +43,36 @@ chiudete la shell e riaprite la shell msys 64 bit
 fate cd rest_erlang
 
 
-e poi make run per far partire il server.
+e poi make run per far partire il server e aspettare che parta.
+
+non abbiamo finito... ora installiamo il nostro REST SERVER:
+
+qua conviene aprire la cartella "C:\msys64\home\<USERNAME>\rest_erlang" in un editor di testo
+
+modificare il file "sys.config" dentro "config" in modo che il contenuto sia il seguente
+
+[
+    {rest_erlang,
+        [
+            {records_file_name, "c:/msys64/home/<USERNAME>/rest_erlang/data/messages.dets"},
+            {state_file_name, "c:/msys64/home/<USERNAME>/rest_erlang/data/messages_state.dets"}
+        ]
+    }
+].
+
+dentro "src" copiare i file *.erl del nostro repository e sostituirli a quelli pre-esistenti
+
+copiare il file "create_table.escript" all'interno della directory principale "rest_erlang"
+
+aprire la schell msys64 e crare la cartella "data" dentro "rest_erlang" con: mkdir data
+
+creare il database con il comando ./create_table.escript data/
+
+========================
+
+avviare il server make run
+
+
+
+
+
