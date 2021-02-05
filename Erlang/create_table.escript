@@ -13,8 +13,8 @@
 main([Filename]) ->
     Filename1 = io_lib:format("~smessages.dets", [Filename]),
     Filename2 = io_lib:format("~smessages_state.dets", [Filename]),
-    dets:open_file(record_tab, [{file, Filename1}, {type, set}]),
-    dets:open_file(record_state_tab, [{file, Filename2}, {type, set}]),
+    dets:open_file(record_tab, [{file, Filename1}, {type, bag}]),
+    dets:open_file(record_state_tab, [{file, Filename2}, {type, bag}]),
     dets:insert(record_state_tab, {current_id, 1}),
     dets:close(record_state_tab),
     dets:close(record_tab);

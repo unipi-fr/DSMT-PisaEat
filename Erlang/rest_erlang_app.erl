@@ -9,9 +9,8 @@ start(_Type, _Args) ->
 		%% {HostMatch, list({PathMatch, Handler, InitialState})}
         {'_', [
 				{"/", rest_handler, [help]},
-				{"/help", rest_handler, [help]},
-				{"/api/chat/:session_id", rest_handler, [chat]},
-        {"/api/chat/write/:session_id", rest_handler, [message]}
+				{"/api/help", rest_handler, [help]},
+				{"/api/chat/:session_id", rest_handler, [chat]}
 			  ]}
     ]),
     {ok, _} = cowboy:start_clear(my_http_listener,
