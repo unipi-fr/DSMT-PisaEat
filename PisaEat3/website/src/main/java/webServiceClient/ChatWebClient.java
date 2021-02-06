@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class ChatWebClient {
     private static final Logger logger = Logger.getLogger(ChatWebClient.class.getName());
     public static String PROTOCOL = "http://";
-    public static String BASE_URL = "192.168.56.118:8081/api/";
+    public static String BASE_URL = "localhost:8081/api/";
     public static String CHAT_API = "chat";
 
     public static BookSessionChat getChat(String bookSessionId) {
