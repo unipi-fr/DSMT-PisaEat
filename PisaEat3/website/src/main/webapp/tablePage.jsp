@@ -4,6 +4,27 @@
 <html lang="en">
 <head>
     <%@include file="header.jsp" %>
+    <script>
+        $(document).ready(function () {
+            $('#send-message').click(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: 'SessionServlet',
+                    data: {
+                        messageBody: $("input[name=messageBody]").val()
+                    },
+                    error: function (response) {
+                        // Gets called when an error occurs with error details in variable response
+                    },
+                    success: function (response) {
+                        // Gets called when the action is successful with server response in variable response
+                        location.reload();
+                    }
+                });
+            });
+        });
+    </script>
+
     <title>TablePage</title>
 </head>
 <body>

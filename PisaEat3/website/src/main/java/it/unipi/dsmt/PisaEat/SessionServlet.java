@@ -23,9 +23,38 @@ public class SessionServlet extends HttpServlet {
     @EJB
     ITableBean tableBean;
 
-    @Override
+    /*@Override
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         logger.info("[DEBUG] inside the service method of SessionServlet");
+
+        String bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
+        String name = (String) req.getSession(true).getAttribute("name");
+
+        if (name == null) {
+            req.setAttribute("errorMessage", "Name not provided");
+            getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+        }
+
+        try {
+            BookSession bookSession = tableBean.getBookSessionById(bookSessionId);
+
+            BookSessionChat chat = ChatWebClient.getChat(bookSessionId);
+
+            req.setAttribute("bookSessionMessages", chat.ListMessages);
+            req.setAttribute("sessionName", name);
+            req.setAttribute("bookSession", bookSession);
+            getServletContext().getRequestDispatcher("/tablePage.jsp").forward(req, res);
+        } catch (BookSessionNotFoundException e) {
+            logger.info("[DEBUG] " + e.getMessage());
+
+            req.setAttribute("errorMessage", e.getMessage());
+            getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+        }
+    }*/
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        logger.info("[DEBUG] inside the doGet method of SessionServlet");
 
         String bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
         String name = (String) req.getSession(true).getAttribute("name");
@@ -71,5 +100,6 @@ public class SessionServlet extends HttpServlet {
         String messageBody = req.getParameter("messageBody");
 
         ChatWebClient.sendMessage(bookSessionId, name, messageBody);
+        doGet(req,res);
     }
 }
