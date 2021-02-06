@@ -5,6 +5,7 @@
 <head>
     <%@include file="header.jsp" %>
     <script>
+        /*
         $(document).ready(function () {
             $('#send-message').click(function () {
                 $.ajax({
@@ -22,7 +23,47 @@
                     }
                 });
             });
+        });*/
+
+        var wsocket;
+        var serviceLocation = "ws://localhost:8080/chat-WebSocket/chat/";
+        var $nickName;
+        var $message;
+        var $chatWindow;
+        var room = '';
+
+        function onMessageReceived(evt) {
+            var msg = JSON.parse(evt.data);
+            var $receivedMessage = $('<div class="col-sm-10 me-auto"><div class="card shadow-sm py-2 bg-light px-3 mb-3"><p class="card-title mb-0">' + msg.username + ':</p><p class="card-text mb-0">' + msg.message + '</p><p class="small text-muted text-end m-0">' + msg.localDatetime + '</p></div></div>');
+            $chatWindow.append($receivedMessage);
+        }
+
+        function sendMessage() {
+            var msg = '{"message":"' + $message.val() + '", "username":"'
+            + $nickName.val() + '"}';
+
+            wsocket.send(msg);
+        }
+
+        function connectToChatserver() {
+            bookSessionId = ${bookSession.id}
+                wsocket = new WebSocket(serviceLocation + bookSessionId);
+            wsocket.onmessage = onMessageReceived;
+        }
+
+        $(document).ready(function () {
+            $nickName = $('#nickname');
+            $message = $('#message');
+            $chatWindow = $('#chatWindow');
+
+            connectToChatserver();
+
+            $('#doChat').submit(function (evt) {
+                evt.preventDefault();
+                sendMessage()
+            });
         });
+
     </script>
 
     <title>TablePage</title>
