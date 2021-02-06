@@ -20,6 +20,7 @@
         <module>ejbs-interfaces</module>
         <module>ejbs</module>
         <module>website</module>
+        <module>chat-WebSocket</module>
     </modules>
 
     <dependencies>

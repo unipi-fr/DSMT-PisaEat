@@ -2,8 +2,8 @@ package chatMessage;
 
 public class InputChatMessage {
 
-    public String Username;
-    public String Message;
+    private String Username;
+    private String Message;
 
     public InputChatMessage() {
     }
