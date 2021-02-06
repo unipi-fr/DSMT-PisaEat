@@ -1,15 +1,18 @@
 ### client di prova per testare il web service
-GET http://localhost:8081/ HTTP/1.1
+@hostname = 192.168.56.118
+@port = 8081
+@host = {{hostname}}:{{port}}
+GET http://{{host}}:8081/ HTTP/1.1
 ###
 
 GET http://localhost:8081/api/help HTTP/1.1
 ###
 
-GET http://localhost:8081/api/chat/601d721b6de4ea79fb818f8e HTTP/1.1
+GET http://localhost:8081/api/chat/6 HTTP/1.1
 ###
 
-POST http://localhost:8081/api/chat/601d721b6de4ea79fb818f8e HTTP/1.1
+POST http://localhost:8081/api/chat/6 HTTP/1.1
 Content-Type: application/json
 
-{"username": "Alessà","message": "<script>alert('Hacked!!!');</script>"}
+{"username": "Alessa","message": "Sono allergico alle verdure"}
 ###
