@@ -16,7 +16,7 @@
 </div>
 
 <!-- WRITE BOX -->
-<form action="#">
+<form action="#" method="post">
     <div class="input-group">
         <input type="text" name="messageBody" placeholder="Type a message for the kitchen" aria-describedby="send-message" class="form-control rounded-0 border-0 py-4 bg-light">
         <div class="input-group-append d-flex align-content-center align-items-center">

@@ -48,7 +48,7 @@ public class TableServlet extends HttpServlet {
         HttpSession session = req.getSession(true);
 
         if (session.getAttribute("name") != null && session.getAttribute("bookSessionId") != null) {
-            res.sendRedirect("BookingServlet");
+            res.sendRedirect("SessionServlet");
             return;
         }
 
@@ -63,7 +63,7 @@ public class TableServlet extends HttpServlet {
                     session.setAttribute("bookSessionId", bookSession.getId());
                     session.setAttribute("name", name);
 
-                    res.sendRedirect("BookingServlet");
+                    res.sendRedirect("SessionServlet");
                 } catch (TableAlreadyBookedException | BookSessionNotFoundException | TableNotFoundException | ExecutionException | InterruptedException e) {
                     logger.info("[DEBUG] " + e.getMessage());
 
@@ -83,7 +83,7 @@ public class TableServlet extends HttpServlet {
                     session.setAttribute("bookSessionId", bookSession.getId());
                     session.setAttribute("name", name);
 
-                    res.sendRedirect("BookingServlet");
+                    res.sendRedirect("SessionServlet");
                 } catch (BookSessionNotFoundException | InvalidPinException | ExecutionException | InterruptedException e) {
                     logger.info("[DEBUG] " + e.getMessage());
 

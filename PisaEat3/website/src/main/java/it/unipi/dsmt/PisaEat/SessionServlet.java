@@ -11,13 +11,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import webServiceClient.ChatWebClient;
 import webServiceClient.entities.BookSessionChat;
-import webServiceClient.entities.BookSessionMessage;
 
 import java.io.IOException;
 import java.util.logging.Logger;
 
-@WebServlet(name = "BookingServlet", value = "/BookingServlet")
-public class BookingServlet extends HttpServlet {
+@WebServlet(name = "SessionServlet", value = "/SessionServlet")
+public class SessionServlet extends HttpServlet {
 
     private final Logger logger = Logger.getLogger(getClass().getName());
 
@@ -26,7 +25,7 @@ public class BookingServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        logger.info("[DEBUG] inside the doPost method of BookingServlet");
+        logger.info("[DEBUG] inside the service method of SessionServlet");
 
         String bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
         String name = (String) req.getSession(true).getAttribute("name");
@@ -51,5 +50,26 @@ public class BookingServlet extends HttpServlet {
             req.setAttribute("errorMessage", e.getMessage());
             getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
         }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        logger.info("[DEBUG] inside the doPost method of SessionServlet");
+
+        String bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
+        String name = (String) req.getSession(true).getAttribute("name");
+
+        if (name == null) {
+            req.setAttribute("errorMessage", "Name not provided");
+            getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+        }
+        if (bookSessionId == null) {
+            req.setAttribute("errorMessage", "SessionID not provided");
+            getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+        }
+
+        String messageBody = req.getParameter("messageBody");
+
+        ChatWebClient.sendMessage(bookSessionId, name, messageBody);
     }
 }
