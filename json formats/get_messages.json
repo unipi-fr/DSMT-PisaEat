@@ -1,0 +1,22 @@
+{
+  "list": [
+    {
+      "bookSessionId": "1",
+      "username": "tizio",
+      "message": "Lo chef mi sta sulle palle!",
+      "datetimeUTC": "2021-02-05T15:30:22Z"
+    },
+    {
+      "bookSessionId": "1",
+      "username": "fanculo l'errore",
+      "message": "Lo chef mi sta sulle palle!",
+      "datetimeUTC": "2021-02-05T15:30:37Z"
+    },
+    {
+      "bookSessionId": "1",
+      "username": "fanculo l'errore",
+      "message": "Lo chef mi sta sulle palle!",
+      "datetimeUTC": "2021-02-05T15:30:58Z"
+    }
+  ]
+}
