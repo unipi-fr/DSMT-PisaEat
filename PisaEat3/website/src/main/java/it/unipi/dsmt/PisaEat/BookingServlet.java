@@ -9,6 +9,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import webServiceClient.ChatWebClient;
+import webServiceClient.entities.BookSessionChat;
+import webServiceClient.entities.BookSessionMessage;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -35,6 +38,11 @@ public class BookingServlet extends HttpServlet {
 
         try {
             BookSession bookSession = tableBean.getBookSessionById(bookSessionId);
+
+            BookSessionChat chat = ChatWebClient.getChat(bookSessionId);
+            for (BookSessionMessage message : chat.List) {
+                logger.info("[DEBUG][MESSAGE] " + message.toString());
+            }
 
             req.setAttribute("bookSession", bookSession);
             getServletContext().getRequestDispatcher("/tablePage.jsp").forward(req, res);
