@@ -18,6 +18,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
             <version>9.0.0</version>
@@ -51,5 +56,8 @@
                 <version>3.3.0</version>
             </plugin>
         </plugins>
+        <finalName>
+            PisaEat
+        </finalName>
     </build>
 </project>

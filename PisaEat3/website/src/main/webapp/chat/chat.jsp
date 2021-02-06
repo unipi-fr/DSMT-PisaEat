@@ -1,8 +1,18 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- CHAT BOX -->
 <div class="py-sm-3 px-sm-5 d-flex flex-column overflow-auto vh-60" >
-    <jsp:include page="message.jsp"/>
-
+    <c:forEach items="${bookSessionMessages}" var="message">
+        <c:set var="message" value="${message}" scope="request"/>
+        <c:choose>
+            <c:when test="${message.getUsername() == sessionName}">
+                <jsp:include page="receiverMessage.jsp"/>
+            </c:when>
+            <c:otherwise>
+                <jsp:include page="messageSender.jsp"/>
+            </c:otherwise>
+        </c:choose>
+    </c:forEach>
 </div>
 
 <!-- WRITE BOX -->

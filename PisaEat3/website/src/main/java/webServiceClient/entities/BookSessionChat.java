@@ -4,6 +4,7 @@ import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.json.bind.annotation.JsonbProperty;
 
 import java.util.Arrays;
+import java.util.List;
 
 /*
 {
@@ -12,17 +13,18 @@ import java.util.Arrays;
 */
 
 public class BookSessionChat {
-    public BookSessionMessage[] List;
+    public List<BookSessionMessage> ListMessages;
 
     @JsonbCreator
     public BookSessionChat(@JsonbProperty("list") BookSessionMessage[] list) {
-        List = list;
+
+        ListMessages = Arrays.asList(list);
     }
 
     @Override
     public String toString() {
         return "BookSessionChat{" +
-                "List=" + Arrays.toString(List) +
+                "List=" + ListMessages.toString() +
                 '}';
     }
 }

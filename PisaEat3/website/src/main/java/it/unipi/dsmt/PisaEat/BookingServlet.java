@@ -40,10 +40,9 @@ public class BookingServlet extends HttpServlet {
             BookSession bookSession = tableBean.getBookSessionById(bookSessionId);
 
             BookSessionChat chat = ChatWebClient.getChat(bookSessionId);
-            for (BookSessionMessage message : chat.List) {
-                logger.info("[DEBUG][MESSAGE] " + message.toString());
-            }
 
+            req.setAttribute("bookSessionMessages", chat.ListMessages);
+            req.setAttribute("sessionName", name);
             req.setAttribute("bookSession", bookSession);
             getServletContext().getRequestDispatcher("/tablePage.jsp").forward(req, res);
         } catch (BookSessionNotFoundException e) {

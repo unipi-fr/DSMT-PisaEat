@@ -3,6 +3,12 @@ package webServiceClient.entities;
 import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.json.bind.annotation.JsonbProperty;
 
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
+
 /*
 
 {
@@ -17,6 +23,7 @@ public class BookSessionMessage {
     public String Username;
     public String Message;
     public String DatetimeUTC;
+    public String LocalDatetime;
 
     public BookSessionMessage() {
     }
@@ -32,6 +39,52 @@ public class BookSessionMessage {
         this.Username = username;
         this.Message = message;
         this.DatetimeUTC = datetimeUTC;
+        this.LocalDatetime = Instant.parse(datetimeUTC)
+                .atZone(ZoneId.systemDefault())
+                .format(
+                        DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
+                                .withLocale(Locale.getDefault())
+                );
+    }
+
+    public String getBookSessionId() {
+        return BookSessionId;
+    }
+
+    public void setBookSessionId(String bookSessionId) {
+        BookSessionId = bookSessionId;
+    }
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String username) {
+        Username = username;
+    }
+
+    public String getMessage() {
+        return Message;
+    }
+
+    public void setMessage(String message) {
+        Message = message;
+    }
+
+    public String getDatetimeUTC() {
+        return DatetimeUTC;
+    }
+
+    public void setDatetimeUTC(String datetimeUTC) {
+        DatetimeUTC = datetimeUTC;
+    }
+
+    public String getLocalDatetime() {
+        return LocalDatetime;
+    }
+
+    public void setLocalDatetime(String localDatetime) {
+        LocalDatetime = localDatetime;
     }
 
     @Override
