@@ -54,8 +54,7 @@ modificare il file "sys.config" dentro "config" in modo che il contenuto sia il 
 [
     {rest_erlang,
         [
-            {records_file_name, "c:/msys64/home/<USERNAME>/rest_erlang/data/messages.dets"},
-            {state_file_name, "c:/msys64/home/<USERNAME>/rest_erlang/data/messages_state.dets"}
+            {records_file_name, "c:/msys64/home/<USERNAME>/rest_erlang/data/messages.dets"}
         ]
     }
 ].

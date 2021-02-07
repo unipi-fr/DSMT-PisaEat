@@ -36,12 +36,11 @@ public class ChatWebClient {
         SendBookSessionMessage sendMessage = new SendBookSessionMessage(name, message);
 
         Client client = ClientBuilder.newClient();
-        String response = client.target(targetUrl).request(MediaType.APPLICATION_JSON)
+        BookSessionMessage response = client.target(targetUrl).request(MediaType.APPLICATION_JSON)
                 .accept(MediaType.TEXT_PLAIN_TYPE)
-                .post(Entity.json(sendMessage), String.class);
+                .post(Entity.json(sendMessage), BookSessionMessage.class);
         logger.info("[DEBUG] " + response);
 
-        BookSessionMessage bookSessionMessage = new BookSessionMessage();
-        return bookSessionMessage;
+        return response;
     }
 }
