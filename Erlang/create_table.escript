@@ -1,22 +1,8 @@
-#!/usr/bin/env escript
-
-%%
-%% synopsis:
-%%     Create new records and state DETS files.
-%% usage:
-%%     create_table.escript <db-file-stem>
-%% example:
-%%     # create Data/test01_records.dets and Data/test01_state.dets 
-%%     create_table.escript Data/test01
-%%     
+#!/usr/bin/env escript    
 
 main([Filename]) ->
     Filename1 = io_lib:format("~smessages.dets", [Filename]),
-    Filename2 = io_lib:format("~smessages_state.dets", [Filename]),
     dets:open_file(record_tab, [{file, Filename1}, {type, bag}]),
-    dets:open_file(record_state_tab, [{file, Filename2}, {type, bag}]),
-    dets:insert(record_state_tab, {current_id, 1}),
-    dets:close(record_state_tab),
     dets:close(record_tab);
 main(["--help"]) ->
     usage();
