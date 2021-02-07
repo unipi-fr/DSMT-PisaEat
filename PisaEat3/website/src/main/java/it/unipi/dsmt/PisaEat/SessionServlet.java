@@ -100,6 +100,5 @@ public class SessionServlet extends HttpServlet {
         String messageBody = req.getParameter("messageBody");
 
         ChatWebClient.sendMessage(bookSessionId, name, messageBody);
-        doGet(req,res);
     }
 }

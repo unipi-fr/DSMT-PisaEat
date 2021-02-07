@@ -44,10 +44,11 @@ public class TableServlet extends HttpServlet {
         String op = req.getParameter("operation");
 
         String name;
+        String bookSessionId;
 
         HttpSession session = req.getSession(true);
 
-        if (session.getAttribute("name") != null && session.getAttribute("bookSessionId") != null) {
+        if (session.getAttribute("name") != null && session.getAttribute("bookSessionId") != null && !op.equals("leaveOperation")) {
             res.sendRedirect("SessionServlet");
             return;
         }
@@ -74,7 +75,7 @@ public class TableServlet extends HttpServlet {
                 break;
             case "joinOperation":
                 name = req.getParameter("name");
-                String bookSessionId = req.getParameter("bookSessionId");
+                bookSessionId = req.getParameter("bookSessionId");
                 String pin = req.getParameter("pin");
 
                 try {
@@ -91,6 +92,29 @@ public class TableServlet extends HttpServlet {
                     getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
                 }
 
+                break;
+            case "leaveOperation":
+                logger.info("[DEBUG] inside the leave case of doPost Method of TableServlet");
+
+                bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
+
+                if (bookSessionId == null) {
+                    req.setAttribute("errorMessage", "bookSessionId not set");
+                    getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+                    return;
+                }
+
+                try {
+                    leaveTable(bookSessionId);
+                    session.invalidate();
+
+                    res.sendRedirect("HomeServlet");
+                } catch (TableNotFoundException e) {
+                    logger.info("[DEBUG] " + e.getMessage());
+
+                    req.setAttribute("errorMessage", e.getMessage());
+                    getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+                }
                 break;
             default:
                 req.setAttribute("errorMessage", "Operation Not Valid");
@@ -119,5 +143,9 @@ public class TableServlet extends HttpServlet {
 
         Future<BookSession> bookSession = singletonTableBean.joinBookSession(bookSessionId, name, pin);
         return bookSession.get();
+    }
+
+    private void leaveTable(String bookSessionId) throws TableNotFoundException {
+        tableBean.leaveTable(bookSessionId);
     }
 }

@@ -26,20 +26,36 @@ public class HomeServlet extends HttpServlet {
 
         Collection<Table> tables = tableBean.getTables();
 
-        if(tables.isEmpty()){
-            Table t1 = new Table("tavolo 1",7,null);
+        if (tables.isEmpty()) {
+            Table t1 = new Table("tavolo 1", 7, null);
             t1 = tableBean.createTable(t1);
-            Table t2 = new Table("tavolo 2",5,null);
+            Table t2 = new Table("tavolo 2", 5, null);
             t2 = tableBean.createTable(t2);
-            Table t3 = new Table("tavolo 3",4,null);
+            Table t3 = new Table("tavolo 3", 4, null);
             t3 = tableBean.createTable(t3);
-            Table t4 = new Table("tavolo 4",2,null);
+            Table t4 = new Table("tavolo 4", 2, null);
             t4 = tableBean.createTable(t4);
 
             tables = tableBean.getTables();
         }
 
         String bookSessionId = (String) req.getSession().getAttribute("bookSessionId");
+
+        if (bookSessionId != null) {
+
+            boolean sentinel = false;
+            for (Table table : tables) {
+                if (bookSessionId.equals(table.getBookSessionId())) {
+                    sentinel = true;
+                    break;
+                }
+            }
+
+            if (!sentinel) {
+                req.getSession().invalidate();
+                bookSessionId = null;
+            }
+        }
 
         req.setAttribute("Tables", tables);
         req.setAttribute("bookSessionId", bookSessionId);

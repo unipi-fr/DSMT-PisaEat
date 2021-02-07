@@ -5,6 +5,7 @@ import database.ITableDao;
 import database.mongo.BookSessionDao;
 import database.mongo.MongoDbConnector;
 import database.mongo.TableDao;
+import exceptions.TableNotFoundException;
 import interfaces.ITableBean;
 import entities.BookSession;
 import entities.Table;
@@ -21,13 +22,6 @@ public class TableBean implements ITableBean {
     private final IBookSessionDao iBookSessionDao = new BookSessionDao(MongoDbConnector.getInstance());
 
     public TableBean() {
-    }
-
-    private String generatePin() {
-        SecureRandom random = new SecureRandom();
-        int num = random.nextInt(10000);
-
-        return String.format("%04d", num);
     }
 
     @Override
@@ -53,5 +47,18 @@ public class TableBean implements ITableBean {
     @Override
     public BookSession getBookSessionById(String id) throws BookSessionNotFoundException {
         return iBookSessionDao.getBookSessionById(id);
+    }
+
+    @Override
+    public void leaveTable(String bookSessionId) throws TableNotFoundException {
+        if (bookSessionId == null) {
+            throw new IllegalArgumentException();
+        }
+
+        Table table = iTableDao.getTableBySessionId(bookSessionId);
+
+        table.setBookSessionId(null);
+
+        iTableDao.updateTable(table);
     }
 }

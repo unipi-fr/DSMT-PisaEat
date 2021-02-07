@@ -11,7 +11,7 @@
     <c:otherwise>
         <c:choose>
             <c:when test="${bookSessionId == table.bookSessionId}">
-                <a class="btn btn-md btn-dark" href="BookingServlet">Join</a>
+                <a class="btn btn-md btn-dark" href="SessionServlet">Join</a>
             </c:when>
             <c:otherwise>
                 <button type="button" class="btn btn-md btn-dark" disabled>
