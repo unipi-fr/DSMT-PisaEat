@@ -5,6 +5,7 @@
 <head>
     <%@include file="header.jsp" %>
     <script>
+        /*
         $(document).ready(function () {
             $('#send-message').click(function () {
                 $.ajax({
@@ -22,7 +23,52 @@
                     }
                 });
             });
+        });*/
+
+        var wsocket;
+        var serviceLocation = "ws://localhost:8080/chat-WebSocket-1.0-SNAPSHOT/chat/";
+        var $username;
+        var $message;
+        var $chatWindow;
+
+        function onMessageReceived(evt) {
+            var msg = JSON.parse(evt.data);
+            if (msg.username.localeCompare("${sessionScope.name}") == 0)
+            {
+                var $receivedMessage = $('<div class="col-sm-10 ms-auto"> <div class="card shadow-sm text-white bg-dark py-2 px-3 mb-3"> <p class="card-text mb-0">' + msg.message + '</p> <p class="small text-muted text-end m-0">' + msg.localDatetime + '</p> </div> </div>');
+            } else {
+                var $receivedMessage = $('<div class="col-sm-10 me-auto"><div class="card shadow-sm py-2 bg-light px-3 mb-3"><p class="card-title mb-0">' + msg.username + ':</p><p class="card-text mb-0">' + msg.message + '</p><p class="small text-muted text-end m-0">' + msg.localDatetime + '</p></div></div>');
+            }
+            $chatWindow.append($receivedMessage);
+        }
+
+        function sendMessage() {
+            var msg = '{"message":"' + $message.val() + '", "username":"'
+            + $username + '"}';
+
+            wsocket.send(msg);
+        }
+
+        function connectToChatserver() {
+            bookSessionId = "${bookSession.id}";
+                wsocket = new WebSocket(serviceLocation + bookSessionId);
+            wsocket.onmessage = onMessageReceived;
+        }
+
+        $(document).ready(function () {
+            $username = "${sessionScope.name}";
+            $message = $('#messageBody');
+            $chatWindow = $('#chatWindow');
+
+            connectToChatserver();
+
+            $('#send-message').click(function (evt) {
+                evt.preventDefault();
+                sendMessage();
+                $message.val('');
+            });
         });
+
     </script>
 
     <title>TablePage</title>
