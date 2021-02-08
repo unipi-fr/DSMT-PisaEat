@@ -26,7 +26,7 @@
         });*/
 
         var wsocket;
-        var serviceLocation = "ws://localhost:8080/chat-WebSocket-1.0-SNAPSHOT/chat/";
+        var serviceLocation = "ws://localhost:8080/chat-WebSocket/chat/";
         var $username;
         var $message;
         var $chatWindow;

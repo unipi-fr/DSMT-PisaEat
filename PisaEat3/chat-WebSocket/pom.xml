@@ -44,6 +44,7 @@
     </dependencies>
 
     <build>
+        <finalName>chat-WebSocket</finalName>
         <plugins>
 
         </plugins>
