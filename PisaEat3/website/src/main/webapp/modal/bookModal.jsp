@@ -10,7 +10,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Book Table ${table.name}</h4>
+                    <h4 class="modal-title">Book Table '${table.name}'</h4>
                     <button type="button" class="btn btn-close" data-dismiss="modal"></button>
                 </div>
 
