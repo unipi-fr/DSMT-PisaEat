@@ -53,72 +53,69 @@ public class TableServlet extends HttpServlet {
             return;
         }
 
-        switch (op) {
-            case "bookOperation":
-                name = req.getParameter("name");
-                String tableId = req.getParameter("tableId");
+        try {
+            BookSession bookSession;
+            switch (op) {
+                case "bookOperation":
+                    name = req.getParameter("name");
+                    String tableId = req.getParameter("tableId");
 
-                try {
-                    BookSession bookSession = bookTable(tableId, name);
 
-                    session.setAttribute("bookSessionId", bookSession.getId());
-                    session.setAttribute("name", name);
-
-                    res.sendRedirect("SessionServlet");
-                } catch (TableAlreadyBookedException | BookSessionNotFoundException | TableNotFoundException | ExecutionException | InterruptedException e) {
-                    logger.info("[DEBUG] " + e.getMessage());
-
-                    req.setAttribute("errorMessage", e.getMessage());
-                    getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
-                }
-
-                break;
-            case "joinOperation":
-                name = req.getParameter("name");
-                bookSessionId = req.getParameter("bookSessionId");
-                String pin = req.getParameter("pin");
-
-                try {
-                    BookSession bookSession = joinTable(bookSessionId, name, pin);
+                    bookSession = bookTable(tableId, name);
 
                     session.setAttribute("bookSessionId", bookSession.getId());
                     session.setAttribute("name", name);
 
                     res.sendRedirect("SessionServlet");
-                } catch (BookSessionNotFoundException | InvalidPinException | ExecutionException | InterruptedException e) {
-                    logger.info("[DEBUG] " + e.getMessage());
 
-                    req.setAttribute("errorMessage", e.getMessage());
-                    getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
-                }
 
-                break;
-            case "leaveOperation":
-                logger.info("[DEBUG] inside the leave case of doPost Method of TableServlet");
+                    break;
+                case "joinOperation":
+                    name = req.getParameter("name");
+                    bookSessionId = req.getParameter("bookSessionId");
+                    String pin = req.getParameter("pin");
 
-                bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
 
-                if (bookSessionId == null) {
-                    req.setAttribute("errorMessage", "bookSessionId not set");
-                    getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
-                    return;
-                }
+                    bookSession = joinTable(bookSessionId, name, pin);
 
-                try {
+                    session.setAttribute("bookSessionId", bookSession.getId());
+                    session.setAttribute("name", name);
+
+                    res.sendRedirect("SessionServlet");
+
+                    break;
+                case "leaveOperation":
+                    logger.info("[DEBUG] inside the leave case of doPost Method of TableServlet");
+
+                    bookSessionId = (String) req.getSession(true).getAttribute("bookSessionId");
+
+                    if (bookSessionId == null) {
+                        req.setAttribute("errorMessage", "bookSessionId not set");
+                        getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+                        return;
+                    }
+
+
                     leaveTable(bookSessionId);
                     session.invalidate();
 
                     res.sendRedirect("HomeServlet");
-                } catch (TableNotFoundException e) {
-                    logger.info("[DEBUG] " + e.getMessage());
-
-                    req.setAttribute("errorMessage", e.getMessage());
+                    break;
+                default:
+                    req.setAttribute("errorMessage", "Operation Not Valid");
                     getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
-                }
-                break;
-            default:
-                req.setAttribute("errorMessage", "Operation Not Valid");
-                getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
+            }
+        } catch (BookSessionNotFoundException | InvalidPinException | ExecutionException | InterruptedException | TableNotFoundException | TableAlreadyBookedException e) {
+            String message = e.getMessage();
+            Throwable cause = e.getCause();
+            while (cause != null) {
+                message = cause.getMessage();
+                cause = cause.getCause();
+            }
+            logger.info("[DEBUG] " + message);
+
+            req.setAttribute("errorMessage", message);
+            getServletContext().getRequestDispatcher("/HomeServlet").forward(req, res);
         }
     }
 
