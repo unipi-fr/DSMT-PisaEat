@@ -17,6 +17,7 @@ start(_Type, _Args) ->
         [{port, 8081}],
         #{env => #{dispatch => Dispatch}}
     ),
+    error_logger:tty(false),
     rest_erlang_sup:start_link().
 
 stop(_State) ->
